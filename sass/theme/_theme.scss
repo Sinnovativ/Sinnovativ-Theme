@@ -1,0 +1,28 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+h2 {
+  color: $secondary;
+}
+
+.navbar {
+
+  .navbar-brand {
+    width: 200px;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100vw;
+  }
+}
+
+#page-wrapper.wrapper {
+  padding-top: 0px;
+}
+
+.post-image {
+  height: 50vh;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
