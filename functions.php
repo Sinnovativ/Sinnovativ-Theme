@@ -33,3 +33,16 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+
+// Glunz Animation
+function my_script() {
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'mein_tolles_script', trailingslashit( get_stylesheet_directory_uri() ) . 'myscript.js', array( 'jquery' ));
+    wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array('jquery'), '3.5.1', false );
+    wp_enqueue_script( 'MotionPathPlugin', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js', array('gsap'), '3.5.1', false );
+    wp_enqueue_script( 'ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array('gsap'), '3.5.1', false );
+    wp_enqueue_script( 'vendor', get_stylesheet_directory_uri() . '/js/_vendor/DrawSVGPlugin.min.js', array('gsap'), '3.5.1', false );
+    wp_enqueue_script( 'animation', get_stylesheet_directory_uri() . '/js/glunz.js', array('jquery'), '1.1.2', true );
+}
+add_action( 'wp_enqueue_scripts', 'my_script' );

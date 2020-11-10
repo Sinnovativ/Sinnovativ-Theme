@@ -5,15 +5,19 @@
 
 $primary: #EF6D23; // Thats a sample how you could change a BootStrap variable.
 $secondary: #203669;
+$gray-900: #231f20;
+$dark: #302E2C;
+
 $enable-responsive-font-sizes: true;
 $font-family-base: "Open Sans", sans-serif;
 $font-size-base: 1.25rem;
 $spacer: 1rem;
 $headings-color: $primary;
-$paragraph-margin-bottom: 2rem; 
+$paragraph-margin-bottom: 3rem;
+$headings-margin-bottom: 1rem;
 
 $h1-font-size: $font-size-base * 2;
-$h2-font-size:	$font-size-base * 1.75;
-$h3-font-size:	$font-size-base * 1.5;
-$h4-font-size:	$font-size-base * 1.25;
+$h2-font-size:	$font-size-base * 1.5;
+$h3-font-size:	$font-size-base * 1.25;
+$h4-font-size:	$font-size-base * 1;
 $h5-font-size:	$font-size-base * 1;

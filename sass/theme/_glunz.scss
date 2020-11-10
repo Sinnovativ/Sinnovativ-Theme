@@ -1,0 +1,85 @@
+#wirkungskette {
+  position: relative;
+  margin: 50px 0px 150px 0px; }
+  #wirkungskette svg {
+    display: block;
+    margin: 0 10px;
+    overflow: visible; }
+    #wirkungskette svg g#path > polygon {
+      opacity: 0; }
+    #wirkungskette svg image {
+      display: block;
+      position: relative; }
+    @media only screen and (min-width: 1024px) {
+      #wirkungskette svg {
+        margin: 0 100px; } }
+    @media only screen and (min-width: 1320px) {
+      #wirkungskette svg {
+        margin: 0 208px; } }
+  #wirkungskette button {
+    color: white;
+    margin: 20px 0 0 0; }
+
+.wk-text-box {
+  position: absolute;
+  width: 60vw; }
+  @media only screen and (min-width: 1320px) {
+    .wk-text-box {
+      width: 600px; } }
+
+.wk-text-box-1 {
+  top: -2%;
+  left: 6%; }
+
+.wk-text-box-2 {
+  top: 18%;
+  right: 0px;
+  text-align: right; }
+
+.wk-text-box-3 {
+  top: 34%;
+  left: 8%; }
+
+.wk-text-box-4 {
+  top: 49%;
+  left: 19%; }
+
+.wk-text-box-5 {
+  top: 70%;
+  right: 17%;
+  text-align: right; }
+
+.wk-text-box-6 {
+  top: 89%;
+  left: 6%; }
+
+#kennzahlen {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin: 100px 0px 50px 0px; }
+  #kennzahlen .kennzahl {
+    -webkit-flex-basis: 33.333%;
+        -ms-flex-preferred-size: 33.333%;
+            flex-basis: 33.333%;
+    position: relative;
+    text-align: center; }
+    #kennzahlen .kennzahl .kennzahl-img {
+      max-width: 200px; }
+  #kennzahlen .kennzahl-text-wrapper {
+    margin-top: 20px;
+    display: block;
+    position: relative; }
+  #kennzahlen .number {
+    display: block;
+    color: #e9571b;
+    font-size: 60px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    line-height: 1.2em; }

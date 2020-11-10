@@ -1,10 +1,79 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+h1.entry-title {
+  text-align: center;
+  padding: 1em 0;
+}
+
 h2 {
   color: $secondary;
 }
 
+ol li {
+  padding-bottom: 1em;
+}
+
+a {
+  transition: color 300ms;
+}
+
 .navbar {
+
+  .navbar-nav {
+    text-transform: uppercase;
+
+    li {
+      padding-left: 2em;
+    }
+
+    a {
+      color: $secondary;
+      letter-spacing: 0.1em;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .dropdown-toggle::after {
+        display: none;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $gray-100;
+      border-radius: 0;
+      border-color: transparent;
+
+      li {
+        padding-left: 0;
+      }
+
+
+      .dropdown-item {
+        padding:   0.5em 2em;
+        font-size: 1rem;
+      }
+    }
+
+
+    #menu-item-71 a {
+      //Spenden menu
+      color: $primary;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
 
   .navbar-brand {
     width: 200px;
@@ -16,13 +85,102 @@ h2 {
   }
 }
 
+.wp-block-embed {
+  margin-bottom: 2em;
+}
+
 #page-wrapper.wrapper {
   padding-top: 0px;
 }
+
+ .btn {
+   border-radius: 2em;
+   padding-left: 2em;
+   padding-right: 2em;
+   border-width: 2px;
+ }
 
 .post-image {
   height: 50vh;
   background-position: center center;
   background-size: cover;
   width: 100%;
+
+  &.home-image {
+    height: calc(100vh - 120px);
+    display: flex;
+    align-items: flex-end;
+    .cta {
+      background-color: rgba($primary, 0.6);
+      color: $white;
+      padding: 1.5em;
+      width: 100%;
+      margin: 0;
+
+      .btn {
+        background-color: $white;
+        color: $secondary;
+        border-color: transparent;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.mapsvg-wrap-all {
+  margin-bottom: 4em;
+}
+
+.fokus-teaser {
+  background-color: rgba($primary,0.09);
+
+  .fokus-description {
+    font-size: 1rem;
+  }
+}
+
+#wrapper-footer {
+  padding-bottom: 0;
+}
+
+footer#colophon {
+  background-color: $dark;
+  color: $white;
+
+  .footer-address {
+    font-size: 1rem;
+    padding-top: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-id-5134 .wp-block-group .wp-block-image {
+    display: flex;
+    align-items: center;
+    padding: 1.5em;
+    height: 200px;
+  }
+}
+
+#navigation_footer {
+  width: 100%;
+  list-style-type: none;
+
+  li {
+    padding: 0 1em;
+
+    a {
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
 }
