@@ -16,9 +16,7 @@ defined( 'ABSPATH' ) || exit;
 if ( ! function_exists( 'understrap_posted_on' ) ) {
 	function understrap_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
-		}
+
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
@@ -27,8 +25,8 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 		);
 		$posted_on   = apply_filters(
 			'understrap_posted_on', sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html_x( 'Posted on', 'post date', 'understrap' ),
+				'<span class="posted-on">%1$s %3$s</span>',
+				esc_html_x( '', 'post date', 'understrap' ),
 				esc_url( get_permalink() ),
 				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
@@ -41,7 +39,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 				esc_html( get_the_author() )
 			)
 		);
-		echo $posted_on . $byline; // WPCS: XSS OK.
+		echo $posted_on; // WPCS: XSS OK.
 	}
 }
 

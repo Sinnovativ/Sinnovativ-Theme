@@ -34,6 +34,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
+
+				<div class="container mt-5">
+					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
 				<?php if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>
@@ -57,6 +61,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 				<?php endif; ?>
+
+					</div>
+				</div>
 
 			</main><!-- #main -->
 

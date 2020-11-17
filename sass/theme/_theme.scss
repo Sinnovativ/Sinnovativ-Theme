@@ -15,9 +15,21 @@ ol li {
 
 a {
   transition: color 300ms;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+#content:foucs {
+  outline: none;
 }
 
 .navbar {
+
+  .navbar-toggler-icon {
+    background-image: url("../img/navigation.svg");
+  }
 
   .navbar-nav {
     text-transform: uppercase;
@@ -155,6 +167,7 @@ footer#colophon {
   }
 }
 
+/* Center partners logos */
 @media (min-width: 768px) {
   .page-id-5134 .wp-block-group .wp-block-image {
     display: flex;
@@ -162,6 +175,11 @@ footer#colophon {
     padding: 1.5em;
     height: 200px;
   }
+}
+
+/* Team page font size */
+.page-id-5164 .wp-block-column p {
+  font-size: 1rem;
 }
 
 #navigation_footer {
@@ -181,6 +199,20 @@ footer#colophon {
     a:hover {
       text-decoration: none;
       color: $primary;
+    }
+  }
+}
+
+#index-wrapper {
+  article {
+
+    .posted-on {
+      color: $secondary;
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
   }
 }

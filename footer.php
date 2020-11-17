@@ -27,12 +27,12 @@ defined( 'ABSPATH' ) || exit;
 			</div><!--col end -->
 
 			<div class="fokus-description col-md-6  col-sm-12  py-md-4 py-2">
-				Das neue Magazin erscheint vier bis sechs Mal im Jahr und gibt spannende Einblicke in unsere Projekte. Melden Sie sich für die Druckausgabe oder unseren Newsletter an.
+				Das neue Magazin erscheint drei bis vier Mal im Jahr und gibt spannende Einblicke in unsere Projekte. Melden Sie sich für die Druckausgabe oder unseren Newsletter an.
 			</div><!--col end -->
 
 
 			<div class="col-md-2  col-sm-12   py-md-4 pt-2 pb-4">
-				<a href="wer-wir-sind/publikationen/" class="btn btn-outline-secondary">Abonnieren</a>
+				<a href="/was-wir-tun/anmeldung-fokus-velafrica-newsletter/" class="btn btn-outline-secondary">Abonnieren</a>
 			</div><!--col end -->
 		</div><!-- row end -->
 

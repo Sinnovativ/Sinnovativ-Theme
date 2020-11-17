@@ -23,6 +23,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<main class="site-main" id="main">
 
+					<div class="container mt-5">
+
 					<section class="error-404 not-found">
 
 						<header class="page-header">
@@ -75,6 +77,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div><!-- .page-content -->
 
 					</section><!-- .error-404 -->
+
+				</div>
 
 				</main><!-- #main -->
 

@@ -26,6 +26,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
+				<div class="container mt-5">
+
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
@@ -55,6 +57,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 				<?php endif; ?>
+
+			</div>
 
 			</main><!-- #main -->
 

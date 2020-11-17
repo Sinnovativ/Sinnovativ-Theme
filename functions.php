@@ -46,3 +46,15 @@ function my_script() {
     wp_enqueue_script( 'animation', get_stylesheet_directory_uri() . '/js/glunz.js', array('jquery'), '1.1.2', true );
 }
 add_action( 'wp_enqueue_scripts', 'my_script' );
+
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
