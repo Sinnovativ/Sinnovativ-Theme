@@ -36,7 +36,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 				<div class="container mt-5">
-					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+					<h1 class="entry-title">News & Events</h1>
+
+					<div class="row posts-overview row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
 
 				<?php if ( have_posts() ) : ?>
 

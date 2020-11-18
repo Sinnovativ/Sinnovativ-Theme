@@ -105,40 +105,72 @@ $container = get_theme_mod( 'understrap_container_type' );
 
   </div>
 
+  </div>
 
+  <div class="<?php echo esc_attr( $container ); ?> bg-light home-news py-4" id="content">
+
+    <div class="container">
+
+
+    <div class="row">
+
+      <div class="col-md-12 content-area" id="primary">
+
+        <main class="site-main" id="main" role="main">
+
+          <?php while ( have_posts() ) : the_post(); ?>
+
+            <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+
+
+          <?php endwhile; // end of the loop. ?>
+
+        </main><!-- #main -->
+
+      </div><!-- #primary -->
+
+    </div><!-- .row end -->
+
+    <?php
+    // Show latest posts
+    $the_query = new WP_Query( 'posts_per_page=4' ); ?>
+
+
+    <div class="row posts-overview row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+    <?php while ( $the_query ->have_posts() ) : $the_query -> the_post(); ?>
+
+      <?php
+
+      /*
+       * Include the Post-Format-specific template for the content.
+       * If you want to override this in a child theme, then include a file
+       * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+       */
+      get_template_part( 'loop-templates/content', get_post_format() );
+      ?>
+
+    <?php endwhile;
+
+    wp_reset_postdata();
+    ?>
+
+
+
+    </div>
+
+    <div class="row">
+      <div class="col text-center pb-4">
+        <a href="was-wir-tun/news-events/" class="btn btn-outline-secondary">Mehr News</a>
+      </div>
+    </div>
+
+    </div>
 
   </div>
 
+  </div><!-- #content -->
 
-
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
-
-		<div class="row">
-
-			<div class="col-md-12 content-area" id="primary">
-
-				<main class="site-main" id="main" role="main">
-
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-						<?php
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-						?>
-
-					<?php endwhile; // end of the loop. ?>
-
-				</main><!-- #main -->
-
-			</div><!-- #primary -->
-
-		</div><!-- .row end -->
-
-	</div><!-- #content -->
 
 </div><!-- #full-width-page-wrapper -->
 
