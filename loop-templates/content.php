@@ -11,9 +11,9 @@ defined( 'ABSPATH' ) || exit;
 <div class="col">
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-
+	<a href="<?php echo get_permalink() ?>">
 		<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
-
+</a>
 	<header class="entry-header pt-4">
 
 		<?php
