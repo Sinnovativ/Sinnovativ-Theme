@@ -161,9 +161,26 @@ footer#colophon {
   background-color: $dark;
   color: $white;
 
+  .social-links {
+    a {
+      padding-left: 0.5em;
+      font-size: 1.3em;
+      color: $white;
+    }
+  }
+
   .footer-address {
     font-size: 1rem;
     padding-top: 1em;
+
+    .tel-hint {
+      font-size: 80%;
+      line-height: 120%;
+      max-width: 20em;
+    }
+  }
+  .footer-content {
+    font-size: 1rem;
   }
 }
 
