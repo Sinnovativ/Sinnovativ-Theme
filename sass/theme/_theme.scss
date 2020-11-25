@@ -1,5 +1,11 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+
+div:focus {
+  outline: none;
+}
+
+
 h1.entry-title {
   text-align: center;
   padding: 1em 0;
@@ -77,12 +83,27 @@ a {
     }
 
 
-    #menu-item-71 a {
-      //Spenden menu
-      color: $primary;
+    #menu-item-71 {
 
-      &:hover {
-        color: $secondary;
+      a {
+        //Spenden menu
+        color: $primary;
+
+        svg {
+          margin-left: 2px;
+          stroke: rgba(234,87,27,0.8);
+          transition-property: all;
+          transition-duration: 300ms;
+          margin-top: -5px;
+        }
+
+        &:hover {
+          color: $secondary;
+
+          svg {
+            stroke: #1f366a;
+          }
+        }
       }
     }
   }
