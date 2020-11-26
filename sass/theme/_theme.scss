@@ -31,6 +31,11 @@ a {
   outline: none;
 }
 
+.wp-block-image figcaption {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
 .navbar {
 
   .navbar-toggler-icon {
@@ -251,6 +256,15 @@ footer#colophon {
       text-decoration: none;
       color: $primary;
     }
+  }
+}
+
+#single-wrapper {
+  padding-top: 0;
+
+  .entry-meta {
+    padding-bottom: 1em;
+    color: $secondary;
   }
 }
 
