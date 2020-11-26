@@ -82,6 +82,19 @@ a {
       }
     }
 
+  .wpml-ls-slot-28 {
+      padding-left: 0 !important;
+      a {
+        opacity: 50%;
+      }
+
+      &.wpml-ls-current-language {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+
 
     #menu-item-71 {
 
