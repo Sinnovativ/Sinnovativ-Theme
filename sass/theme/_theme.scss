@@ -218,10 +218,16 @@ b, strong {
 }
 
 footer#colophon {
-  background-color: $dark;
+  background-color: $secondary;
   color: $white;
 
+  img {
+    filter: brightness(100);
+  }
+
   .social-links {
+    margin-top: 0;
+
     a {
       padding-left: 0.5em;
       font-size: 1.3em;
@@ -241,6 +247,18 @@ footer#colophon {
   }
   .footer-content {
     font-size: 1rem;
+  }
+
+  .sinnovativ {
+    font-size: 1rem;
+
+    padding-top: 90px;
+
+    a {
+      font-size: 1rem;
+      color: $primary;
+      padding-left: 0;
+    }
   }
 }
 

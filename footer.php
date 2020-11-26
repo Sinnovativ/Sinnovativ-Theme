@@ -59,25 +59,17 @@ defined( 'ABSPATH' ) || exit;
 					<img src="<?php echo get_template_directory_uri(); ?>/img/velafrica-foot.png" alt="fokus velafrica">
 				</div><!--col end -->
 
-				<div class="col-md-4  col-sm-12  py-4 mt-3 text-center text-md-right social-links">
+				<div class="col-md-4  col-sm-12  py-5 text-center text-md-right social-links">
 					<a target="_blank" href="https://www.facebook.com/Velafrica1"><i class="fa fa-facebook"></i></a>
 					<a target="_blank" href="https://www.instagram.com/velafrica/"><i class="fa fa-instagram"></i></a>
 					<a target="_blank" href="https://www.youtube.com/channel/UCPsGcahOckJTJrOs4HPr9uA"><i class="fa fa-youtube"></i></a>
 					<a target="_blank" href="https://ch.linkedin.com/company/velafrica"><i class="fa fa-linkedin"></i></a>
-				</div><!--col end -->
 
-				</div><!-- row end -->
-
-				<div class="row footer-content">
-
-					<div class="col-sm-12  py-4 d-flex align-items-left justify-content-sm-center align-items-sm-center">
-<span>Velafrica ist ein Unternehmen der <a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a></span>
-							</ul>
-
+					<div class="sinnovativ">
+	<span>Ein Unternehmen der<br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a></span>
 					</div><!--col end -->
-
-			</div><!-- row end -->
-
+				</div><!--col end -->
+				</div><!-- row end -->
 		</div>
 
 		</footer><!-- #colophon -->
