@@ -6,11 +6,14 @@ div:focus {
 }
 
 
-h1, h2, h3, h4, h5, h6, p, ul, ol {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.content-area {
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+  }
 }
+
 
 .wp-block-columns {
   margin-top: 3em;
@@ -167,8 +170,8 @@ b, strong {
 
  .btn {
    border-radius: 2em;
-   padding-left: 2em;
-   padding-right: 2em;
+   padding-left: 1.2em;
+   padding-right: 1.2em;
    border-width: 2px;
  }
 
@@ -308,7 +311,7 @@ footer#colophon {
 }
 
 .home-news {
-  margin-bottom: -3em;
+  margin-bottom: -60px;
 
 }
 
