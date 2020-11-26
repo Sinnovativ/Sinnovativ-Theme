@@ -150,6 +150,12 @@ b, strong {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
 .wp-block-embed {
   margin-bottom: 3em;
   margin-top: 3em;
