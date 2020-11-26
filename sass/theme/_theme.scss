@@ -307,3 +307,14 @@ footer#colophon {
     }
   }
 }
+
+// Contact form styles
+.wpcf7 {
+  label {
+    margin-bottom: 2rem;
+  }
+  h4 {
+    font-weight: 700;
+    margin-bottom: 1em !important;
+  }
+}
