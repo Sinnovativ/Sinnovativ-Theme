@@ -23,11 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
   <div class="post-image home-image" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)">
   <div class="row cta d-flex align-items-center">
     <div class="col-12 col-md-6 pb-2 pb-md-0">
-      Spenden Sie Ihr Velo für mehr Perspektiven in Afrika
+      Spenden Sie Ihr Velo für mehr Perspektiven in Afrika.
     </div>
     <div class="col-12 col-md-6 d-flex justify-content-end">
-      <a href="/wie-sie-helfen/velosammelstelle-finden/" class="btn btn-secondary mr-2">Sammelstelle finden</a>
-      <a href="/spenden/" class="btn btn-secondary">Spenden</a>
+      <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2">Sammelstelle finden</a>
+      <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary">Spenden</a>
     </div>
   </div>
   </div>
