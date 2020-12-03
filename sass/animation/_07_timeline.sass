@@ -1,0 +1,63 @@
+#timeline
+    display: block
+    position: relative
+    //margin: 100px 0px 50px 0px
+
+.timeline-block
+    display: flex
+    justify-content: center
+    align-items: center
+    //border: 1px solid red
+
+    .tl-text-box
+        width: 40%
+        order: 1
+        opacity: 0
+        transform: translateX(-200px)
+        padding-right: 20px
+    .tl-image-box
+        padding: 0px 20px
+        order: 3
+        width: 40%
+        opacity: 0
+        transform: translateX(200px)
+        text-align: center
+    .path-wrapper
+        order: 2
+        display: flex
+        flex-direction: column
+        justify-content: center
+        //border: 1px solid red
+        width: 20%
+        div
+            background-color: $primary-color
+            height: 30px
+            width: 30px
+            margin: 0 auto 25px auto
+            border-radius: 99px
+            opacity: 0.3
+            transform: scale(0.6)
+        .tl-number
+            height: 60px
+            width: 60px
+            display: flex
+            justify-content: center
+            align-items: center
+            color: white
+            font-weight: bold
+            transform: scale(1)
+
+    &:nth-child(2n)
+        .tl-text-box
+            order: 3
+            transform: translateX(200px)
+            padding-left: 20px
+            padding-right: 0px
+        .tl-image-box
+            order: 1
+            transform: translateX(-200px)
+
+
+
+
+
