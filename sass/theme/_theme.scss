@@ -29,6 +29,7 @@ h1 {
 
 h2 {
   color: $primary;
+  margin-top: 1em;
 }
 
 .site-main {
@@ -300,13 +301,15 @@ footer#colophon {
 
 }
 
-
-
-
 /* publikationen page */
 .page-id-5169 .wp-block-columns {
   max-width: 800px;
   margin: auto;
+
+  .wp-block-embed {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 #navigation_footer {
