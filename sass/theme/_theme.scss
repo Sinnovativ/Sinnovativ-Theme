@@ -31,8 +31,13 @@ h2 {
   color: $primary;
 }
 
-ol li {
-  padding-bottom: 1em;
+ol, ul {
+  margin-bottom: 2rem;
+
+  li {
+    padding-bottom: 1em;
+  }
+
 }
 
 a {
