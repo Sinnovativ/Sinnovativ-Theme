@@ -31,14 +31,15 @@ h2 {
   color: $primary;
 }
 
-ol, ul {
-  margin-bottom: 2rem;
-
-  li {
-    padding-bottom: 1em;
+.site-main {
+  ol, ul {
+    margin-bottom: 2rem;
+    li {
+      padding-bottom: 1em;
+    }
   }
-
 }
+
 
 a {
   transition: color 300ms;
