@@ -19,13 +19,16 @@ div:focus {
   margin-top: 3em;
 }
 
-h1.entry-title {
-  text-align: center;
-  padding: 1em 0;
+h1 {
+  color: $secondary;
+  &.entry-title {
+    text-align: left;
+    padding: 1em 0 0.2em 0;
+  }
 }
 
 h2 {
-  color: $secondary;
+  color: $primary;
 }
 
 ol li {
