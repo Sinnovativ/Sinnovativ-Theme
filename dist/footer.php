@@ -50,6 +50,8 @@ defined( 'ABSPATH' ) || exit;
 					Waldeggstrasse 27<br>
 					3097 Liebefeld<br>
 					+41 (0)31 979 70 50<br>
+					<div class="tel-hint">Unser Telefon wird durch Teilnehmende und Lernende vom <a href="http://drahtesel.ch/" target="_blank">Drahtesel</a> betreut.</div>
+					<br>
 					<a href="mailto:info@velafrica.ch">info@velafrica.ch</a>
 					</div><!--col end -->
 
@@ -57,26 +59,17 @@ defined( 'ABSPATH' ) || exit;
 					<img src="<?php echo get_template_directory_uri(); ?>/img/velafrica-foot.png" alt="fokus velafrica">
 				</div><!--col end -->
 
+				<div class="col-md-4  col-sm-12  py-5 text-center text-md-right social-links">
+					<a target="_blank" href="https://www.facebook.com/Velafrica1"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="https://www.instagram.com/velafrica/"><i class="fa fa-instagram"></i></a>
+					<a target="_blank" href="https://www.youtube.com/channel/UCPsGcahOckJTJrOs4HPr9uA"><i class="fa fa-youtube"></i></a>
+					<a target="_blank" href="https://ch.linkedin.com/company/velafrica"><i class="fa fa-linkedin"></i></a>
 
-				</div><!-- row end -->
-
-				<div class="col-md-4  col-sm-12  py-4">
-				</div><!--col end -->
-
-				<div class="row footer-content">
-
-					<div class="col-sm-12  py-4">
-						<ul id="navigation_footer" class="fy-navigation-footer d-flex align-items-left justify-content-sm-center align-items-sm-center"><li id="menu-item-1697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1697"><a href="https://sinnovativ.ch/">Sinnovativ</a></li>
-						<li id="menu-item-1698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1698"><a href="https://velafrica.ch/">Velafrica</a></li>
-						<li id="menu-item-1699" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1699"><a href="https://drahtesel.ch/">Drahtesel</a></li>
-						<li id="menu-item-1700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1700"><a href="https://dreigaenger.ch">Dreigänger</a></li>
-						<li id="menu-item-1701" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1701"><a href="https://wege-weierbuehl.ch/">Wege-Weierbühl</a></li>
-						</ul>
-
+					<div class="sinnovativ">
+	<span>Ein Unternehmen der<br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a></span>
 					</div><!--col end -->
-
-			</div><!-- row end -->
-
+				</div><!--col end -->
+				</div><!-- row end -->
 		</div>
 
 		</footer><!-- #colophon -->
