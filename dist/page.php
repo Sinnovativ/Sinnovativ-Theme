@@ -38,6 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="container mt-5">
 
 											<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+
 					</div>
 
 

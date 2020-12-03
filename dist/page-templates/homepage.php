@@ -39,35 +39,27 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="container-animation">
 
         <section id="kennzahlen" class="small-12">
-            <div class="kennzahl kennzahl-1">
-                <img class="kennzahl-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/content/10_velomechanik.png" >
-                <span class="kennzahl-text-wrapper">
-                    <span class="number">70</span>
-                    <p>Jugendliche absolvieren bei Velafrica-Partnern in Afrika eine Ausbildung in Velomechanik.</p>
-                </span>
-            </div>
-            <div class="kennzahl kennzahl-2">
-                <img class="kennzahl-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/content/20_bike2school.png" >
-                <span class="kennzahl-text-wrapper">
-                    <span class="number">1324</span>
-                    <p>Mädchen erhielten letztes Jahr in Tansania dank «Bike to School» ein vergünstigtes Velo.</p>
-                </span>
-            </div>
-            <div class="kennzahl kennzahl-3">
-                <img class="kennzahl-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/content/30_Export.png" >
-                <span class="kennzahl-text-wrapper">
-                    <span class="number">21964</span>
-                    <p>Velos hat Velafrica letztes Jahr exportiert – dazu 24‘341 Ersatzteile.</p>
-                </span>
-            </div> 
+            <?php if( have_rows('kennzahlen') ): ?>
+                <?php while( have_rows('kennzahlen') ): the_row(); 
+                    $image = get_sub_field('kennzahl_img'); ?>
+                    <div class="kennzahl">
+                        <img class="kennzahl-img" src="<?php echo $image; ?>" >
+                        <span class="kennzahl-text-wrapper">
+                            <span class="number"><?php the_sub_field('kennzahl'); ?></span>
+                            <p><?php the_sub_field('kennzahl_text'); ?></p>
+                        </span>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </section>
 
     </div>
 
         <section class="zwischentext">
             <div class="container">
-                <h2>Mit Velos Gutes bewirken</h2>
-                <p>Die Verbindung von Integrationsarbeit in der Schweiz und Entwicklungszusammenarbeit in Afrika macht Velafrica einzigartig. Seit 1993 sammeln wir ausgediente Velos, stellen sie in sozialen Einrichtungen instand und exportieren sie danach zu Partnerunternehmen in Afrika. Vor Ort bewirken die Velos viel Positives.</p>
+                <?php $zwischentext = get_field('zwischentext'); ?>
+                <h2><?php echo $zwischentext['zwischentext_titel']; ?></h2>
+                <p><?php echo $zwischentext['zwischentext_text']; ?></p>
             </div>
         </section>
 
@@ -76,34 +68,35 @@ $container = get_theme_mod( 'understrap_container_type' );
         <section id="wirkungskette" class="small-12">
         
             <?php echo file_get_contents(get_stylesheet_directory_uri() . "/img/svg/wirkungskette.svg"); ?>
+            <?php $wirkungskette = get_field('wirkungskette'); ?>
             <div class="wk-text-box wk-text-box-1">
-                <h2>Sammlung & Recycling</h2>
-                <p>Velafrica sammelt jährlich gegen 35'000 Velos. Das entspricht rund 10 Prozent der Velos, die pro Jahr in der Schweiz neu gekauft werden. Rund 400 Sammelstellen nehmen ganzjährig Velospenden für Velafrica an, hinzu kommen Velosammlungen und Abholaktionen. <a href="#">Hier</a> können Sie Ihr Velo Velafrica spenden. Und <a href="#">hier</a> erfahren Sie, wie Sie eine eigene Velosammlung für Velafrica auf die Beine stellen.</p>
+                <h2><?php echo $wirkungskette['sammlung']; ?></h2>
+                <p><?php echo $wirkungskette['sammlung_text']; ?></p>
             </div>
         
             <div class="wk-text-box wk-text-box-2">
-                <h2>Integration & Engagement</h2>
-                <p><a href="#">Über 30 soziale Betriebe</a> beteiligen sich schweizweit an der Verarbeitung der gespendeten Velos. Rund zwei Drittel der Fahrräder werden repariert und exportiert, ein Drittel zu Ersatzteilen demontiert. In Bern Liebefeld führt Velafrica eine eigene Velowerkstatt. Sie ist ein Integrationsprojekt für geflüchtete Menschen und zudem ein Ort, wo sich motivierte Freiwillige engagieren können. Möchten auch Sie sich in der Werkstatt von Velafrica betätigen? <a href="#">Hier erfahren Sie mehr.</a></p>
+                <h2><?php echo $wirkungskette['integration']; ?></h2>
+                <p><?php echo $wirkungskette['integration_text']; ?></p>
             </div>
         
             <div class="wk-text-box wk-text-box-3">
-                <h2>Export</h2>
-                <p>Velafrica exportiert jährlich über 20'000 Velos nach Afrika. Sie finden Platz in rund 50 Schiffscontainern, welche sich von der Schweiz auf eine sechs- bis achtwöchige Reise an ihr Ziel begeben. Pro Woche wird ein Container verladen, zudem Tausende von Ersatzteilen. Am meisten brauchen unsere Partnerunternehmen Schläuche, Räder und Ketten.</p>
+                <h2><?php echo $wirkungskette['export']; ?></h2>
+                <p><?php echo $wirkungskette['export_text']; ?></p>
             </div>
         
             <div class="wk-text-box wk-text-box-4">
-                <h2>Soziales Unternehmertum</h2>
-                <p>Velafrica beliefert <a href="#">neun lokal verankerte Partnerunternehmen</a> in sieben Ländern - vier Veloläden in Westafrika und fünf Velozentren in Burkina Faso, Tansania, Madagaskar und Südafrika. Bei den Partnerunternehmen entstehen Jobs in der Werkstatt, im Verkauf und in der Administration. 88 Personen fanden in den Betrieben eine Anstellung.</p>
+                <h2><?php echo $wirkungskette['soziales']; ?></h2>
+                <p><?php echo $wirkungskette['soziales_text']; ?></p>
             </div>
         
             <div class="wk-text-box wk-text-box-5">
-                <h2>Berufsbildung</h2>
-                <p>Velafrica fördert gezielt die berufliche Ausbildung von Velomechanikerinnen und Velomechanikern, um jungen Menschen eine Perspektive zu geben und die langfristige Nutzung der exportierten Velos sicherzustellen. Die Velozentren bieten 70 Ausbildungsplätze an. </p>
+                <h2><?php echo $wirkungskette['berufsbildung']; ?></h2>
+                <p><?php echo $wirkungskette['berufsbildung_text']; ?></p>
             </div>
         
             <div class="wk-text-box wk-text-box-6">
-                <h2>Mobilität</h2>
-                <p>Mit einem Velo kommt man viermal schneller vorwärts und es können dreimal mehr Lasten transportiert werden als zu Fuss. Es sichert den Zugang zu Arbeitsplätzen, zur Schule und zu Gesundheitszentren. Velafrica fördert mit Programmen wie «Bike to School» gezielt die Velomobilität.</p>
+                <h2><?php echo $wirkungskette['mobilitat']; ?></h2>
+                <p><?php echo $wirkungskette['mobilitat_text']; ?></p>
             </div>
         
         </section>

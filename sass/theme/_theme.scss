@@ -19,18 +19,28 @@ div:focus {
   margin-top: 3em;
 }
 
-h1.entry-title {
-  text-align: center;
-  padding: 1em 0;
+h1 {
+  color: $secondary;
+  &.entry-title {
+    text-align: left;
+    padding: 1em 0 0.2em 0;
+  }
 }
 
 h2 {
-  color: $secondary;
+  color: $primary;
+  margin-top: 1em;
 }
 
-ol li {
-  padding-bottom: 1em;
+.site-main {
+  ol, ul {
+    margin-bottom: 2rem;
+    li {
+      padding-bottom: 1em;
+    }
+  }
 }
+
 
 a {
   transition: color 300ms;
@@ -160,7 +170,7 @@ b, strong {
 }
 
 .wp-block-embed {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   margin-top: 3em;
 }
 
@@ -267,17 +277,55 @@ footer#colophon {
 
 /* Center partners logos */
 @media (min-width: 768px) {
-  .page-id-5134 .wp-block-group .wp-block-image {
-    display: flex;
-    align-items: center;
-    padding: 1.5em;
-    height: 200px;
+  .page-id-5134 {
+
+    .wp-block-columns {
+      margin-top: 0;
+    }
+  
+    .wp-block-group .wp-block-image {
+      display: flex;
+      align-items: center;
+      padding: 1.5em;
+      height: 200px;
+    }
   }
 }
 
 /* Team page font size */
-.page-id-5164 .wp-block-column p {
-  font-size: 1rem;
+.page-id-5164 .wp-block-column {
+
+  .wp-block-columns {
+    margin-top: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* publikationen page */
+.page-id-5169 .wp-block-columns {
+  max-width: 800px;
+  margin: auto;
+
+  .wp-block-embed {
+    margin-top: 0; 
+    margin-bottom: 1em;
+  }
+}
+
+/* spenden */
+.page-id-5132 {
+ .wp-block-columns,
+ iframe {
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+ }
 }
 
 #navigation_footer {
