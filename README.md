@@ -86,6 +86,7 @@ There are several ways to install UnderStrap. We'll look at three of them: (1) c
 - Make sure you have installed Node.js and Browser-Sync (optional) on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
 - Run: `$ npm install`
+- NODE Version v12
 
 ### Running
 To work with and compile your Sass files on the fly start:

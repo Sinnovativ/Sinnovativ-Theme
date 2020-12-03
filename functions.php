@@ -42,8 +42,8 @@ function my_script() {
     wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array('jquery'), '3.5.1', false );
     wp_enqueue_script( 'MotionPathPlugin', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js', array('gsap'), '3.5.1', false );
     wp_enqueue_script( 'ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array('gsap'), '3.5.1', false );
-    wp_enqueue_script( 'vendor', get_stylesheet_directory_uri() . '/js/_vendor/DrawSVGPlugin.min.js', array('gsap'), '3.5.1', false );
-    wp_enqueue_script( 'animation', get_stylesheet_directory_uri() . '/js/glunz.js', array('jquery'), '1.1.2', true );
+    wp_enqueue_script( 'DrawSVG', get_stylesheet_directory_uri() . '/js/DrawSVGPlugin.min.js', array('gsap'), '3.5.1', false );
+    wp_enqueue_script( 'animation', get_stylesheet_directory_uri() . '/js/glunz.js', array('DrawSVG'), '1.1.2', true );
 }
 add_action( 'wp_enqueue_scripts', 'my_script' );
 
