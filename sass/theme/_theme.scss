@@ -278,7 +278,7 @@ footer#colophon {
 /* Center partners logos */
 @media (min-width: 768px) {
   .page-id-5134 {
-    
+
     .wp-block-columns {
       margin-top: 0;
     }
@@ -301,11 +301,10 @@ footer#colophon {
     margin-left: auto;
     margin-right: auto;
   }
-
+  
   p {
     font-size: 0.9rem;
   }
-
 }
 
 /* publikationen page */
@@ -315,7 +314,7 @@ footer#colophon {
 
   .wp-block-embed {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1em;
   }
 }
 
