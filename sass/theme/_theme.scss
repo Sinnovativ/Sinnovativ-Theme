@@ -285,9 +285,20 @@ footer#colophon {
 }
 
 /* Team page font size */
-.page-id-5164 .wp-block-column p {
-  font-size: 0.9rem;
+.page-id-5164 .wp-block-column {
+
+  .wp-block-columns {
+    margin-top: 0;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+
 }
+
+
+
 
 /* publikationen page */
 .page-id-5169 .wp-block-columns {
