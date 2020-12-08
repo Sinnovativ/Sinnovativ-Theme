@@ -121,10 +121,20 @@ b, strong {
       }
 
       &.wpml-ls-current-language {
-        a {
-          text-decoration: underline;
+        &::after {
+          content: '';
+          display: flex;
+          width: 5px;
+          height: 5px;
+          border-radius: 10px;
+          align-self: baseline;
+          text-align: center;
+          margin-left: 18px;
+          margin-right: 18px;
+          margin-top: -7px;
+          background-color: rgba($secondary,0.5);
+          }
         }
-      }
     }
 
 
@@ -282,7 +292,7 @@ footer#colophon {
     .wp-block-columns {
       margin-top: 0;
     }
-  
+
     .wp-block-group .wp-block-image {
       display: flex;
       align-items: center;
@@ -313,7 +323,7 @@ footer#colophon {
   margin: auto;
 
   .wp-block-embed {
-    margin-top: 0; 
+    margin-top: 0;
     margin-bottom: 1em;
   }
 }
