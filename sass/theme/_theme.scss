@@ -114,22 +114,23 @@ b, strong {
 
   .wpml-ls-slot-28 {
       padding-left: 0 !important;
-      a.nav-link {
+      a {
         opacity: 50%;
-        margin-left: 0.3rem;
-        margin-right: 0.3rem;
-        padding: 0;
       }
 
-
-
-      &.wpml-ls-current-language {
-
-        border-bottom: 2px solid rgba($secondary,0.5);
-
+      &.wpml-ls-current-language a {
+        position: relative;
+        &::after {
+          content: '';
+          width: 24px;
+          height: 2px;
+          background-color: rgba(32,54,105,.5);
+          position: absolute;
+          bottom: 10px;
+          left: 9px;
+          background-color: rgba($secondary,0.5);
+          }
         }
-
-
     }
 
 
