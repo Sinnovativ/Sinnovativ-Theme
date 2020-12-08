@@ -121,7 +121,7 @@ b, strong {
       }
 
       &.wpml-ls-current-language {
-        &::after {
+        &::before {
           content: '';
           width: 5px;
           height: 5px;
