@@ -123,23 +123,18 @@ b, strong {
       &.wpml-ls-current-language {
         &::after {
           content: '';
-          display: flex;
           width: 5px;
           height: 5px;
           border-radius: 10px;
-          align-self: baseline;
-          text-align: center;
           margin-left: 18px;
           margin-right: 18px;
-          margin-top: -7px;
+          margin-top: -10px;
           background-color: rgba($secondary,0.5);
           }
         }
     }
 
-
     #menu-item-71 {
-
       a {
         //Spenden menu
         color: $primary;
