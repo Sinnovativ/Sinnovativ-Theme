@@ -5,7 +5,6 @@ div:focus {
   outline: none;
 }
 
-
 .content-area {
   h1, h2, h3, h4, h5, h6, p, ul, ol {
       max-width: 800px;
@@ -13,7 +12,6 @@ div:focus {
       margin-right: auto;
   }
 }
-
 
 .wp-block-columns {
   margin-top: 3em;
@@ -116,23 +114,22 @@ b, strong {
 
   .wpml-ls-slot-28 {
       padding-left: 0 !important;
-      a {
+      a.nav-link {
         opacity: 50%;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        padding: 0;
       }
 
+
+
       &.wpml-ls-current-language {
-        &::after {
-          content: '';
-          display: flex;
-          width: 5px;
-          height: 5px;
-          border-radius: 10px;
-          margin-left: 18px;
-          margin-right: 18px;
-          margin-top: -10px;
-          background-color: rgba($secondary,0.5);
-          }
+
+        border-bottom: 2px solid rgba($secondary,0.5);
+
         }
+
+
     }
 
 
