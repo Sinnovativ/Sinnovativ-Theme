@@ -283,7 +283,9 @@ footer#colophon {
 
 /* Center partners logos */
 @media (min-width: 768px) {
-  .page-id-5134 {
+  .page-id-5134,
+  .page-id-6949,
+  .page-id-6948 {
 
     .wp-block-columns {
       margin-top: 0;
@@ -305,9 +307,6 @@ footer#colophon {
 
   .wp-block-columns {
     margin-top: 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   p {
@@ -317,23 +316,11 @@ footer#colophon {
 
 /* publikationen page */
 .page-id-5169 .wp-block-columns {
-  max-width: 800px;
-  margin: auto;
 
   .wp-block-embed {
     margin-top: 0;
     margin-bottom: 1em;
   }
-}
-
-/* spenden */
-.page-id-5132 {
- .wp-block-columns,
- iframe {
-   max-width: 800px;
-   margin-left: auto;
-   margin-right: auto;
- }
 }
 
 #navigation_footer {
