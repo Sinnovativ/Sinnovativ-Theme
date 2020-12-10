@@ -360,7 +360,7 @@ footer#colophon {
 
   .entry-meta {
     padding-bottom: 1em;
-    color: $secondary;
+    color: $primary;
   }
 }
 
@@ -371,14 +371,17 @@ footer#colophon {
 
 .home .wrapper-footer {
   padding-top: 0px;
+  margin-top: -30px;
 }
 
 .posts-overview {
   article {
 
     .posted-on {
-      color: $secondary;
-      font-size: 1rem;
+      color: $primary;
+      font-size: 0.8rem;
+      display: block;
+      margin-top: -15px;
     }
 
     p {
