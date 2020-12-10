@@ -71,32 +71,32 @@ $container = get_theme_mod( 'understrap_container_type' );
             <?php $wirkungskette = get_field('wirkungskette'); ?>
             <div class="wk-text-box wk-text-box-1">
                 <h2><?php echo $wirkungskette['sammlung']; ?></h2>
-                <p><?php echo $wirkungskette['sammlung_text']; ?></p>
+                <?php echo $wirkungskette['sammlung_text']; ?>
             </div>
         
             <div class="wk-text-box wk-text-box-2">
                 <h2><?php echo $wirkungskette['integration']; ?></h2>
-                <p><?php echo $wirkungskette['integration_text']; ?></p>
+                <?php echo $wirkungskette['integration_text']; ?>
             </div>
         
             <div class="wk-text-box wk-text-box-3">
                 <h2><?php echo $wirkungskette['export']; ?></h2>
-                <p><?php echo $wirkungskette['export_text']; ?></p>
+                <?php echo $wirkungskette['export_text']; ?>
             </div>
         
             <div class="wk-text-box wk-text-box-4">
                 <h2><?php echo $wirkungskette['soziales']; ?></h2>
-                <p><?php echo $wirkungskette['soziales_text']; ?></p>
+                <?php echo $wirkungskette['soziales_text']; ?>
             </div>
         
             <div class="wk-text-box wk-text-box-5">
                 <h2><?php echo $wirkungskette['berufsbildung']; ?></h2>
-                <p><?php echo $wirkungskette['berufsbildung_text']; ?></p>
+                <?php echo $wirkungskette['berufsbildung_text']; ?>
             </div>
         
             <div class="wk-text-box wk-text-box-6">
                 <h2><?php echo $wirkungskette['mobilitat']; ?></h2>
-                <p><?php echo $wirkungskette['mobilitat_text']; ?></p>
+                <?php echo $wirkungskette['mobilitat_text']; ?>
             </div>
         
         </section>
