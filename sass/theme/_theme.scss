@@ -182,30 +182,42 @@ b, strong {
   margin-top: 3em;
 }
 
-#navbarNavDropdown {
-  ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+@media (max-width: 991px) {
 
-    li {
-      flex-basis: 100%;
-      padding-left: 0;
+  #navbarNavDropdown {
+    margin-top: 1em;
+    margim-bottom: 1em;
 
-      &.wpml-ls-slot-28 {
-        flex-basis: auto;
-        margin-right: 1em;
-
-        a::after {
-          left: 1px;
-        }
-      }
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
 
       li {
-        padding-left: 1em;
-        padding-right: 1em;
+        flex-basis: 100%;
+        padding-left: 0;
+
+        a.dropdown-item {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        &.wpml-ls-slot-28 {
+          flex-basis: auto;
+          margin-right: 1em;
+
+          a::after {
+            left: 1px;
+          }
+        }
+
+        li {
+          padding-left: 1em;
+          padding-right: 1em;
+        }
       }
     }
   }
+
 }
 
 #page-wrapper.wrapper {
