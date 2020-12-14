@@ -33,6 +33,7 @@ h2 {
 .site-main {
   ol, ul {
     margin-bottom: 2rem;
+    padding-left: 1em;
     li {
       padding-bottom: 1em;
     }
@@ -113,6 +114,7 @@ b, strong {
     }
 
   .wpml-ls-slot-28 {
+
       padding-left: 0 !important;
       a {
         opacity: 50%;
@@ -178,6 +180,32 @@ b, strong {
 .wp-block-embed {
   margin-bottom: 1em;
   margin-top: 3em;
+}
+
+#navbarNavDropdown {
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      flex-basis: 100%;
+      padding-left: 0;
+
+      &.wpml-ls-slot-28 {
+        flex-basis: auto;
+        margin-right: 1em;
+
+        a::after {
+          left: 1px;
+        }
+      }
+
+      li {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
+  }
 }
 
 #page-wrapper.wrapper {
@@ -316,6 +344,8 @@ footer#colophon {
 
 /* publikationen page */
 .page-id-5169 .wp-block-columns {
+
+  margin-top: 0;
 
   .wp-block-embed {
     margin-top: 0;
