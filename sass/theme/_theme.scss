@@ -171,8 +171,11 @@ b, strong {
   }
 }
 
-@media (min-width: 768px) {
-  .container {
+
+.container {
+  padding: 0;
+
+  @media (min-width: 768px) {
     max-width: 960px;
   }
 }
