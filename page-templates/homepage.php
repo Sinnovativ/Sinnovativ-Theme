@@ -25,8 +25,8 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="col-12 col-md-6 pb-2 pb-md-0">
       Spenden Sie Ihr Velo für mehr Perspektiven in Afrika.
     </div>
-    <div class="col-12 col-md-6 d-flex justify-content-md-end flex-wrap">
-      <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2 flex-grow-1 flex-sm-grow-0">Sammelstelle finden</a>
+    <div class="col-12 col-md-6 d-flex justify-content-md-end flex-wrap flex-sm-nowrap">
+      <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-sm-2 mb-1 mb-sm-0 flex-grow-1 flex-sm-grow-0">Sammelstelle finden</a>
       <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary  flex-grow-1 flex-sm-grow-0">Spenden</a>
     </div>
   </div>
