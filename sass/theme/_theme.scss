@@ -162,8 +162,11 @@ b, strong {
   }
 
   .navbar-brand {
-    width: 200px;
     padding: 0;
+
+    img {
+        width: 200px;
+    }
   }
 
   .container {
