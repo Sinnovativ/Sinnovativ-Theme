@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 					<?php } ?>
 
-					<div class="container mt-5">
+					<div class="container mt-md-3 mt-lg-5">
 
 											<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
