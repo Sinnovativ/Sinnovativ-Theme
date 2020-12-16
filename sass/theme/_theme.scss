@@ -5,13 +5,13 @@ div:focus {
   outline: none;
 }
 
-.content-area {
-  h1, h2, h3, h4, h5, h6, p, ul, ol, .entry-meta {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-}
+// .content-area {
+//   h1, h2, h3, h4, h5, h6, p, ul, ol, .entry-meta {
+//       max-width: 800px;
+//       margin-left: auto;
+//       margin-right: auto;
+//   }
+// }
 
 .wp-block-columns {
   margin-top: 3em;
@@ -33,6 +33,7 @@ h2 {
 .site-main {
   ol, ul {
     margin-bottom: 2rem;
+    padding-left: 1em;
     li {
       padding-bottom: 1em;
     }
@@ -113,6 +114,7 @@ b, strong {
     }
 
   .wpml-ls-slot-28 {
+
       padding-left: 0 !important;
       a {
         opacity: 50%;
@@ -134,7 +136,7 @@ b, strong {
     }
 
 
-    #menu-item-71 {
+    #menu-item-71, #menu-item-7327, #menu-item-7326 {
 
       a {
         //Spenden menu
@@ -160,8 +162,11 @@ b, strong {
   }
 
   .navbar-brand {
-    width: 200px;
     padding: 0;
+
+    img {
+        width: 200px;
+    }
   }
 
   .container {
@@ -169,8 +174,11 @@ b, strong {
   }
 }
 
-@media (min-width: 768px) {
-  .container {
+
+.site-main .container {
+  padding: 0;
+
+  @media (min-width: 768px) {
     max-width: 960px;
   }
 }
@@ -178,6 +186,44 @@ b, strong {
 .wp-block-embed {
   margin-bottom: 1em;
   margin-top: 3em;
+}
+
+@media (max-width: 991px) {
+
+  #navbarNavDropdown {
+    margin-top: 1em;
+    margim-bottom: 1em;
+
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      li {
+        flex-basis: 100%;
+        padding-left: 0;
+
+        a.dropdown-item {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        &.wpml-ls-slot-28 {
+          flex-basis: auto;
+          margin-right: 1em;
+
+          a::after {
+            left: 1px;
+          }
+        }
+
+        li {
+          padding-left: 1em;
+          padding-right: 1em;
+        }
+      }
+    }
+  }
+
 }
 
 #page-wrapper.wrapper {
@@ -283,7 +329,9 @@ footer#colophon {
 
 /* Center partners logos */
 @media (min-width: 768px) {
-  .page-id-5134 {
+  .page-id-5134,
+  .page-id-6949,
+  .page-id-6948 {
 
     .wp-block-columns {
       margin-top: 0;
@@ -299,39 +347,41 @@ footer#colophon {
 }
 
 /* Team page font size */
-.page-id-5164 .wp-block-column {
+.page-id-6971 .wp-block-column,
+.page-id-5164 .wp-block-column,
+.page-id-6972 .wp-block-column {
 
   .wp-block-columns {
     margin-top: 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   p {
     font-size: 0.9rem;
   }
 }
+/* Spenden page */
+.page-id-1606 {
+  h1.entry-title {
+    text-align: center;
+  }
+
+  .wp-block-columns {
+    h2, p {
+      text-align: center;
+    }
+
+  }
+}
 
 /* publikationen page */
 .page-id-5169 .wp-block-columns {
-  max-width: 800px;
-  margin: auto;
+
+  margin-top: 0;
 
   .wp-block-embed {
     margin-top: 0;
     margin-bottom: 1em;
   }
-}
-
-/* spenden */
-.page-id-5132 {
- .wp-block-columns,
- iframe {
-   max-width: 800px;
-   margin-left: auto;
-   margin-right: auto;
- }
 }
 
 #navigation_footer {
@@ -360,16 +410,23 @@ footer#colophon {
 
   .entry-meta {
     padding-bottom: 1em;
-    color: $secondary;
+    color: $primary;
   }
 }
 
 .home-news {
   margin-bottom: -30px;
 
+  h1.entry-title {
+    text-align: center;
+  }
 }
 
-.home .wrapper-footer {
+#index-wrapper h1.entry-title {
+  text-align: center;
+}
+
+.home #wrapper-footer {
   padding-top: 0px;
 }
 
@@ -377,8 +434,10 @@ footer#colophon {
   article {
 
     .posted-on {
-      color: $secondary;
-      font-size: 1rem;
+      color: $primary;
+      font-size: 0.8rem;
+      display: block;
+      margin-top: -15px;
     }
 
     p {
