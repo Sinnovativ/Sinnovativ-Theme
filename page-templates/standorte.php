@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Standorte - Animation
+ * Template Name: Standorte - Afrikakarte
  *
  * Template for displaying the the Map
  *
@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="container-animation">
                     <section id="standorte">
                         
-                        map
+                        <?php echo file_get_contents(get_stylesheet_directory_uri() . "/img/svg/map.svg"); ?>
                         
                     </section>
                 </div>
