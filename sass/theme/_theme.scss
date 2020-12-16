@@ -166,6 +166,7 @@ b, strong {
 
     img {
         width: 200px;
+        max-width: none;
     }
   }
 
@@ -363,7 +364,9 @@ footer#colophon {
   }
 }
 /* Spenden page */
-.page-id-1606 {
+.page-id-1606,
+.page-id-7321,
+.page-id-7320 {
   h1.entry-title {
     text-align: center;
   }
