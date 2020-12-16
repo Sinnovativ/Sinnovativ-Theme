@@ -25,7 +25,7 @@ let kennzahlTl = gsap.timeline({
 });
 
 kennzahlTl
-    .from(".kennzahl-img", { scale: 0, ease: "back.out(2)", stagger: { from: "center", amount: 0.25 } })
+    .from(".kennzahl-img", { scale: 0.8, ease: "back.out(8)", stagger: { from: "center", amount: 0.25 } })
     .from(".kennzahl-text-wrapper", { autoAlpha: 0, y: 40, ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=1.6")
     .from(".number", { duration: 3, marginBottom: 30, innerHTML: "0", roundProps: "innerHTML", ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=2")    
 

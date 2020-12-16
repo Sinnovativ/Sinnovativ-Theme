@@ -166,6 +166,7 @@ b, strong {
 
     img {
         width: 200px;
+        max-width: none;
     }
   }
 
@@ -238,7 +239,10 @@ b, strong {
  }
 
 .post-image {
-  height: 50vh;
+  height: 25vh;
+  @media (min-width: 992px) {
+    height: 50vh;
+  }
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -360,7 +364,9 @@ footer#colophon {
   }
 }
 /* Spenden page */
-.page-id-1606 {
+.page-id-1606,
+.page-id-7321,
+.page-id-7320 {
   h1.entry-title {
     text-align: center;
   }
