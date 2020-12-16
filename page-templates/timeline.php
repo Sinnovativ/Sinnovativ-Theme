@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Timeline
+ * Template Name: Timeline - Animation
  *
  * Template for displaying the the Timeline
  *

@@ -127,8 +127,8 @@ $('.timeline-block').each(function(){
         }
     })
     .to(tlNumber, { duration: 0.8, opacity: 1, scale: 3, ease: "back.out(2)" })
-    .to(tlText, {duration: 0.6, x: 0, opacity: 1}, "-=0.4")
-    .to(tlImage, {duration: 0.6, x: 0, opacity: 1}, "-=0.6");
+    .to(tlText, {duration: 0.8, x: 0, opacity: 1}, "-=0.4")
+    .to(tlImage, {duration: 0.8, x: 0, opacity: 1}, "-=0.8");
 });
 
 
