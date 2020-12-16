@@ -238,7 +238,10 @@ b, strong {
  }
 
 .post-image {
-  height: 50vh;
+  height: 25vh;
+  @media (min-width: 992px) {
+    height: 50vh;
+  }
   background-position: center center;
   background-size: cover;
   width: 100%;
