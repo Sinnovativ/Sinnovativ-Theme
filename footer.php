@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 			</div><!--col end -->
 
 			<div class="fokus-description col-md-6  col-sm-12  py-md-4 py-2">
-			<?php 	_e( 'Das neue Magazin erscheint drei bis vier Mal im Jahr und gibt spannende Einblicke in unsere Projekte. Melden Sie sich für die Druckausgabe oder unseren Newsletter an.', 'Velafrica Startseite'); ?>
+			<?php 	_e( 'The new magazine is published three to four times a year and provides exciting insights into our projects. Sign up for the print edition or our newsletter.', 'Velafrica Startseite'); ?>
 
 			</div><!--col end -->
 
@@ -51,7 +51,7 @@ defined( 'ABSPATH' ) || exit;
 					Waldeggstrasse 27<br>
 					3097 Liebefeld<br>
 					+41 (0)31 979 70 50<br>
-					<div class="tel-hint"><?php 	_e( 'Unser Telefon wird durch Teilnehmende und Lernende vom <a href="http://drahtesel.ch/" target="_blank">Drahtesel</a> betreut.', 'Velafrica Startseite');?></div>
+					<div class="tel-hint"><?php 	_e( 'Our phone is hosted by participants and learners from <a href="http://drahtesel.ch/" target="_blank">Drahtesel</a>.', 'Velafrica Startseite');?></div>
 					<br>
 					<a href="mailto:info@velafrica.ch">info@velafrica.ch</a>
 					</div><!--col end -->
@@ -67,7 +67,7 @@ defined( 'ABSPATH' ) || exit;
 					<a target="_blank" href="https://ch.linkedin.com/company/velafrica"><i class="fa fa-linkedin"></i></a>
 
 					<div class="sinnovativ">
-	<span><?php 	_e( 'Ein Unternehmen der<br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a>', 'Velafrica Startseite');?></span>
+	<span><?php 	_e( 'A company of<br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a>.', 'Velafrica Startseite');?></span>
 					</div><!--col end -->
 				</div><!--col end -->
 				</div><!-- row end -->
