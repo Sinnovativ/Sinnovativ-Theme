@@ -23,11 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
   <div class="post-image home-image" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)">
   <div class="row cta d-flex align-items-center">
     <div class="col-12 col-md-6 pb-2 pb-md-0">
-      Spenden Sie Ihr Velo für mehr Perspektiven in Afrika.
+      <?php the_field('cta'); ?>
     </div>
-    <div class="col-12 col-md-6 d-flex justify-content-md-end flex-wrap flex-sm-nowrap">
-      <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-sm-2 mb-1 mb-sm-0 flex-grow-1 flex-sm-grow-0">Sammelstelle finden</a>
-      <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary  flex-grow-1 flex-sm-grow-0">Spenden</a>
+    <div class="col-12 col-md-6 d-flex justify-content-end">
+      <a href="<?php the_field('button_1_link'); ?>" class="btn btn-secondary mr-2"><?php the_field('button_1_text'); ?></a>
+      <a href="<?php the_field('button_2_link'); ?>" class="btn btn-secondary"><?php the_field('button_2_text'); ?></a>
     </div>
   </div>
   </div>
@@ -159,7 +159,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div class="row">
           <div class="col text-center pb-4">
-            <a href="was-wir-tun/news-events/" class="btn btn-outline-secondary">Mehr News</a>
+            <a href="was-wir-tun/news-events/" class="btn btn-outline-secondary"><?php the_field('mehr_news_button_text'); ?></a>
           </div>
         </div>
 
