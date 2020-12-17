@@ -1,11 +1,5 @@
-<svg id="wirkungskette-mobile-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 199.67 4326.67">
+<svg id="wirkungskette-mobile-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 199.67 4139">
 <g id="path">
-<polygon points="84.46 4198.58 100.33 4214.45 116.2 4198.58 116.2 4212.04 100.33 4227.91 84.46 4212.04 84.46 4198.58" style="fill:#ff9f37"/>
-<polygon points="84.46 4170.02 100.33 4185.88 116.2 4170.02 116.2 4183.48 100.33 4199.35 84.46 4183.48 84.46 4170.02" style="fill:#ff9f37"/>
-<polygon points="84.46 4141.45 100.33 4157.32 116.2 4141.45 116.2 4154.91 100.33 4170.78 84.46 4154.91 84.46 4141.45" style="fill:#ff9f37"/>
-<polygon points="84.46 4112.89 100.33 4128.75 116.2 4112.89 116.2 4126.35 100.33 4142.22 84.46 4126.35 84.46 4112.89" style="fill:#ff9f37"/>
-<polygon points="84.46 4084.32 100.33 4100.19 116.2 4084.32 116.2 4097.78 100.33 4113.65 84.46 4097.78 84.46 4084.32" style="fill:#ff9f37"/>
-<polygon points="84.46 4055.75 100.33 4071.62 116.2 4055.75 116.2 4069.22 100.33 4085.09 84.46 4069.22 84.46 4055.75" style="fill:#ff9f37"/>
 <polygon points="84.46 4027.19 100.33 4043.06 116.2 4027.19 116.2 4040.65 100.33 4056.52 84.46 4040.65 84.46 4027.19" style="fill:#ff9f37"/>
 <polygon points="84.46 3998.62 100.33 4014.49 116.2 3998.62 116.2 4012.08 100.33 4027.95 84.46 4012.08 84.46 3998.62" style="fill:#ff9f37"/>
 <polygon points="84.46 3970.06 100.33 3985.93 116.2 3970.06 116.2 3983.52 100.33 3999.39 84.46 3983.52 84.46 3970.06" style="fill:#ff9f37"/>
@@ -152,6 +146,6 @@
 <image class="wirkungskette-icon wirkungskette-icon-3" width="400" height="400" transform="translate(0 1744.4) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/3_Export@2x.png"/>
 <image class="wirkungskette-icon wirkungskette-icon-4" width="400" height="400" transform="translate(0 2481.6) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/4_Soziales%20Unternehmertum@2x.png"/>
 <image class="wirkungskette-icon wirkungskette-icon-5" width="400" height="400" transform="translate(0 3298.8) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/5_Berufsbildung@2x.png"/>
-<image class="wirkungskette-icon wirkungskette-icon-6" width="400" height="400" transform="translate(0 4127) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/6_Mobilitaet@2x.png"/>
+<image class="wirkungskette-icon wirkungskette-icon-6" width="400" height="400" transform="translate(0 3939.33) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/6_Mobilitaet@2x.png"/>
 </g>
 </svg>
