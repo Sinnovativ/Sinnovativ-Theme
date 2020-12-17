@@ -1,4 +1,5 @@
 #standorte
+    margin: 100px 0 200px
     svg
         display: block
         margin: 0
@@ -9,6 +10,67 @@
         #land-objekt
             path
                 cursor: pointer
+                transition: fill 0.2s
+            path.active
+                fill: $primary-color !important
+                //fill-opacity: 0.7
         #land-namen
             image
                 cursor: pointer
+            image.active
+                //transform: scale(1.5)
+
+.poup-map
+    display: flex
+    flex-direction: column
+    position: fixed
+    overflow: auto
+    top: 20%
+    left: 50%
+    background-color: #203669
+    //background-color: $primary-color 
+    margin-left: -350px
+    width: 700px
+    max-width: 95vw
+    min-height: 200px
+    max-height: calc(80vh - 50px)
+    transform: scale(0)
+    opacity: 0
+    box-shadow: -10px 10px 0 0 rgba(151,177,199,0.5)
+    border-radius: 5px
+    padding: 0px 40px 10px 20px
+    color: white
+    z-index: 9099
+    h2
+        color: white
+        margin-top: 15px
+    a
+        color: $primary-color
+        text-decoration: underline
+    p
+        margin-bottom: 12px
+
+.close-popup
+    position: absolute
+    display: block
+    height: 40px
+    width: 40px
+    right: 5px
+    top: 5px
+    cursor: pointer
+    transition: transform 0.3s
+    &:hover
+        transform: scale(1.1)
+    span
+        display: block
+        position: absolute
+        background-color: white
+        width: 5px
+        height: 30px
+        top: 9px
+        right: 22px
+        transform: rotate(45deg)
+    span:last-child
+        transform: rotate(-45deg)
+
+

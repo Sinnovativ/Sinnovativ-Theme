@@ -48,11 +48,9 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <?php endwhile; // end of the loop. ?>
 
 
-                <div class="container-animation">
+                <div class="container">
                     <section id="standorte">
-                        
                         <?php echo file_get_contents(get_stylesheet_directory_uri() . "/img/svg/map.svg"); ?>
-                        
                     </section>
                 </div>
 
@@ -66,5 +64,36 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div><!-- #content -->
 
 </div><!-- #page-wrapper -->
+
+<?php $standorte_karte = get_field('standorte_karte'); ?>
+
+<div class="poup-map popup-gambia-obj">
+    <span class="close-popup"><span></span><span></span></span>
+    <?php echo $standorte_karte['gambia']; ?>      
+</div>
+<div class="poup-map popup-burkina-obj">
+    <span class="close-popup"><span></span><span></span></span>
+    <?php echo $standorte_karte['burkina_faso']; ?>      
+</div>
+<div class="poup-map popup-ghana-obj">
+    <span class="close-popup"><span></span><span></span></span>
+    <?php echo $standorte_karte['ghana']; ?>      
+</div>
+<div class="poup-map popup-elfen-obj">
+    <span class="close-popup"><span></span><span></span></span>
+    <?php echo $standorte_karte['elfenbeinkuste']; ?>      
+</div>
+<div class="poup-map popup-tansania-obj">
+    <span class="close-popup"><span></span><span></span></span>
+    <?php echo $standorte_karte['tansania']; ?>      
+</div>
+<div class="poup-map popup-madagaskar-obj">
+    <span class="close-popup"><span></span><span></span></span>
+    <?php echo $standorte_karte['madagaskar']; ?>      
+</div>
+<div class="poup-map popup-sudafrika-obj">
+    <span class="close-popup"><span></span><span></span></span>
+    <?php echo $standorte_karte['sudafrika']; ?>      
+</div>
 
 <?php get_footer(); ?>

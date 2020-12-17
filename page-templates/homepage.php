@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-    <div class="container-animation">
+    <div class="container">
 
         <section id="kennzahlen" class="small-12">
             <?php if( have_rows('kennzahlen') ): ?>
@@ -55,13 +55,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     </div>
 
-        <section class="zwischentext">
-            <div class="container">
-                <?php $zwischentext = get_field('zwischentext'); ?>
-                <h2><?php echo $zwischentext['zwischentext_titel']; ?></h2>
-                <p><?php echo $zwischentext['zwischentext_text']; ?></p>
-            </div>
-        </section>
+    <section class="zwischentext">
+        <div class="container">
+            <?php $zwischentext = get_field('zwischentext'); ?>
+            <h2><?php echo $zwischentext['zwischentext_titel']; ?></h2>
+            <p><?php echo $zwischentext['zwischentext_text']; ?></p>
+        </div>
+    </section>
 
     <div class="container-animation">
 
@@ -104,6 +104,13 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
 
 
+
+    <section class="zwischentext zitat">
+        <div class="container">
+            <h2>«<?php the_field('zitat'); ?>»</h2>
+            <p><?php the_field('zitat_name'); ?></p>
+        </div>
+    </section>
 
 
     <div class="<?php echo esc_attr( $container ); ?> bg-light home-news py-4" id="content">
