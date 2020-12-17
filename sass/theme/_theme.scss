@@ -452,6 +452,28 @@ footer#colophon {
   }
 }
 
+.woocommerce {
+  .woocommerce-result-count,
+  .woocommerce-ordering,
+  .woocommerce-breadcrumb,
+  .posted_in {
+    display: none;
+  }
+
+  div.product {
+    .woocommerce-tabs {
+      ul.tabs {
+        li.active {
+          background-color: transparent;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+
+
+}
+
 // Contact form styles
 .wpcf7 {
   label {

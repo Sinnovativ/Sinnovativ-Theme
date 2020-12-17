@@ -67,7 +67,7 @@ defined( 'ABSPATH' ) || exit;
 					<a target="_blank" href="https://ch.linkedin.com/company/velafrica"><i class="fa fa-linkedin"></i></a>
 
 					<div class="sinnovativ">
-	<span><?php 	_e( 'A company of<br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a>.', 'Velafrica Startseite');?></span>
+	<span><?php 	_e( 'A company of<br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a>', 'Velafrica Startseite');?></span>
 					</div><!--col end -->
 				</div><!--col end -->
 				</div><!-- row end -->
