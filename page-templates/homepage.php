@@ -69,7 +69,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <section id="wirkungskette" class="small-12">
 
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . "/img/svg/wirkungskette.svg"); ?>
+            <span class="show-desktop"><?php echo file_get_contents(get_stylesheet_directory_uri() . "/img/svg/wirkungskette.svg"); ?></span>
+            <span class="show-mobile"><?php echo file_get_contents(get_stylesheet_directory_uri() . "/img/svg/wirkungskette_mobile.svg"); ?></span>
             <?php $wirkungskette = get_field('wirkungskette'); ?>
             <div class="wk-text-box wk-text-box-1">
                 <h2><?php echo $wirkungskette['sammlung']; ?></h2>

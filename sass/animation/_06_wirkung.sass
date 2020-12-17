@@ -1,52 +1,88 @@
 #wirkungskette
     position: relative
-    margin: 150px 0px 250px 0px
+    margin: 50px 0px 150px 0px
     svg
         display: block
-        margin: 0 10px
+        margin: 0
         overflow: visible
+        width: 30vw
         g#path > polygon
             opacity: 0
         image
             display: block
             position: relative
+        +breakpoint(medium)
+            margin: 0 10px
+            width: auto
         +breakpoint(large)
             margin: 0 100px
         +breakpoint(xlarge)
             margin: 0 208px
+    +breakpoint(medium)
+        margin: 150px 0px 250px 0px
     button
         color: white
         margin: 20px 0 0 0
 
 .wk-text-box
     position: absolute
-    width: 60vw
+    width: 58vw
     +breakpoint(xlarge)
         width: 600px
     h2
         margin-top: 0px
         padding: 0px
+    p
+        font-size: 4vw
+        +breakpoint(medium)
+            font-size: 1.2rem
 
 .wk-text-box-1
-    top: -1%
-    left: 7.7%    
+    top: 1%
+    left: auto
+    right: 0px    
+    +breakpoint(medium)
+        top: -1%
+        left: 7.7%
+        right: auto
 .wk-text-box-2
-    top: 19%
-    right: 0px
+    top: 20.7%
+    right: 0
+    +breakpoint(medium)
+        top: 19%
+        right: 0px
 .wk-text-box-3
-    top: 36%
-    left: 4%
-    width: 590px
+    top: 42%
+    left: auto
+    right: 0
+    +breakpoint(medium)
+        top: 36%
+        left: 4%
+        right: auto
+        width: 590px
 .wk-text-box-4
-    top: 52%
-    left: 16%
-    width: 640px
+    top: 58.4%
+    left: auto
+    right: 0
+    +breakpoint(medium)
+        top: 52%
+        left: 16%
+        right: auto
+        width: 640px
 .wk-text-box-5
-    top: 72%
-    right: 11%
+    top: 78%
+    right: 0
+    +breakpoint(medium)
+        top: 72%
+        right: 11%
 .wk-text-box-6
-    top: 89%
-    left: 6%
+    top: 92%
+    left: auto
+    right: 0
+    +breakpoint(medium)
+        top: 89%
+        left: 6%
+        right: auto
 
 
 

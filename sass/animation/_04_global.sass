@@ -33,6 +33,18 @@ hr
 .zwischentext.zitat
     margin-bottom: 0px
 
+// Breakpoint Show
+.show-desktop
+    display: none
+    +breakpoint(medium)
+        display: block
+
+.show-mobile
+    display: block
+    +breakpoint(medium)
+        display: none
+
+
 // Header Button Fix
 .homepage-header-buttons
     flex-direction: column
