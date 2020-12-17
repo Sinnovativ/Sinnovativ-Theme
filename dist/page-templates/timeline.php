@@ -62,10 +62,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         <?php the_sub_field('text'); ?>
                                     </div>
                                     <div class="path-wrapper">
-                                        <?php if($counter == 1): ?>
-                                            <div></div>
-                                            <div></div>
-                                        <?php endif; ?>
                                         <div></div>
                                         <div></div>
                                         <div></div>

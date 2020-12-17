@@ -21,11 +21,25 @@ hr
 .zwischentext
     width: 100vw
     background-color: $primary-color-opacity
-    margin: 180px 0px 100px 0
-    padding: 60px 100px 40px 100px
+    margin: 50px 0px 20px 0
+    padding: 30px 20px 20px 20px
     color: $black
+    +breakpoint(medium)
+        margin: 180px 0px 100px 0
+        padding: 60px 100px 40px 100px
     h2
         color: $primary-color
+
 .zwischentext.zitat
     margin-bottom: 0px
+
+// Header Button Fix
+.homepage-header-buttons
+    flex-direction: column
+    .btn
+        margin: 10px 0
+    +breakpoint(medium)
+        flex-direction: row
+        .btn
+            margin: 0
 

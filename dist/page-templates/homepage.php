@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="col-12 col-md-6 pb-2 pb-md-0">
       <?php  _e( 'Donate your bike for more perspectives in Africa.', 'Velafrica Startseite');  ?>
     </div>
-    <div class="col-12 col-md-6 d-flex justify-content-end">
+    <div class="col-12 col-md-6 d-flex justify-content-end homepage-header-buttons">
       <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2"><?php _e( 'Find a Collection Location', 'Velafrica Startseite');  ?></a>
       <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary"><?php _e( 'Donate', 'Velafrica Startseite'); ?></a>
     </div>
@@ -40,9 +40,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <section id="kennzahlen" class="small-12">
             <?php if( have_rows('kennzahlen') ): ?>
+                <?php $i = 0; ?>
                 <?php while( have_rows('kennzahlen') ): the_row();
+                    $counter++;
                     $image = get_sub_field('kennzahl_img'); ?>
-                    <div class="kennzahl">
+                    <div class="kennzahl kennzahl-<?php echo $counter ?>">
                         <img class="kennzahl-img" src="<?php echo $image; ?>" >
                         <span class="kennzahl-text-wrapper">
                             <span class="number"><?php the_sub_field('kennzahl'); ?></span>

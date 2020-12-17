@@ -3,31 +3,67 @@
 // begin jQuery
 ( function( $ ) {
 
-
 ////////////////////////////
 // Kennzahl Animation
 ////////////////////////////
 
-let kennzahlTl = gsap.timeline({
-    defaults:{ duration: 1.8 },
-    scrollTrigger: {
-        trigger: '#kennzahlen',
-        start: "center 90%",
-        end: '+=150px',
-        toggleActions: "play none none reverse",
-        onEnter: () => {
-          kennzahlTl.timeScale(1.0);
-        },        
-        onEnterBack: () => {
-          kennzahlTl.timeScale(4.0);
-        },
-    }
-});
+ScrollTrigger.matchMedia({
+  // desktop
+  "(min-width: 640px)": function() {
+        let kennzahlTl = gsap.timeline({
+            defaults:{ duration: 1.8 },
+            scrollTrigger: {
+                markers: true,
+                trigger: '#kennzahlen',
+                start: "center 90%",
+                end: '+=150px',
+                toggleActions: "play none none reverse",
+                onEnter: () => {
+                  kennzahlTl.timeScale(1.0);
+                },        
+                onEnterBack: () => {
+                  kennzahlTl.timeScale(4.0);
+                },
+            }
+        });
+        
+        kennzahlTl
+            .from(".kennzahl-img", { scale: 0.8, ease: "back.out(6)", stagger: { from: "center", amount: 0.25 } })
+            .from(".kennzahl-text-wrapper", { autoAlpha: 0, y: 40, ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=1.6")
+            .from(".number", { duration: 3, marginBottom: 30, innerHTML: "0", roundProps: "innerHTML", ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=2")    
 
-kennzahlTl
-    .from(".kennzahl-img", { scale: 0.8, ease: "back.out(6)", stagger: { from: "center", amount: 0.25 } })
-    .from(".kennzahl-text-wrapper", { autoAlpha: 0, y: 40, ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=1.6")
-    .from(".number", { duration: 3, marginBottom: 30, innerHTML: "0", roundProps: "innerHTML", ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=2")    
+  },
+  // mobile
+  "(max-width: 639px)": function() {
+        let kennzahlTl1 = gsap.timeline({
+            defaults:{ duration: 1.8 },
+            scrollTrigger: { markers: false, trigger: '.kennzahl-1', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl1.timeScale(1.0); }, onEnterBack: () => { kennzahlTl1.timeScale(4.0); },}
+        });
+        kennzahlTl1
+            .from(".kennzahl-1 .kennzahl-img", { scale: 0.8, ease: "back.out(6)" })
+            .from(".kennzahl-1 .kennzahl-text-wrapper", { autoAlpha: 0, y: 40, ease: "power4.out" }, "-=1.6")
+            .from(".kennzahl-1 .number", { duration: 3, marginBottom: 30, innerHTML: "0", roundProps: "innerHTML", ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=2")
+        
+        let kennzahlTl2 = gsap.timeline({
+            defaults:{ duration: 1.8 },
+            scrollTrigger: { markers: false, trigger: '.kennzahl-2', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl2.timeScale(1.0); }, onEnterBack: () => { kennzahlTl2.timeScale(4.0); },}
+        });
+        kennzahlTl2
+            .from(".kennzahl-2 .kennzahl-img", { scale: 0.8, ease: "back.out(6)" })
+            .from(".kennzahl-2 .kennzahl-text-wrapper", { autoAlpha: 0, y: 40, ease: "power4.out" }, "-=1.6")
+            .from(".kennzahl-2 .number", { duration: 3, marginBottom: 30, innerHTML: "0", roundProps: "innerHTML", ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=2")
+        
+        let kennzahlTl3 = gsap.timeline({
+            defaults:{ duration: 1.8 },
+            scrollTrigger: { markers: false, trigger: '.kennzahl-3', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl3.timeScale(1.0); }, onEnterBack: () => { kennzahlTl3.timeScale(4.0); },}
+        });
+        kennzahlTl3
+            .from(".kennzahl-3 .kennzahl-img", { scale: 0.8, ease: "back.out(6)" })
+            .from(".kennzahl-3 .kennzahl-text-wrapper", { autoAlpha: 0, y: 40, ease: "power4.out" }, "-=1.6")
+            .from(".kennzahl-3 .number", { duration: 3, marginBottom: 30, innerHTML: "0", roundProps: "innerHTML", ease: "power4.out", stagger: { from: "center", amount: 0.25 } }, "-=2")
+            
+    }    
+});
 
 
 ////////////////////////////
