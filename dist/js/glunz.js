@@ -13,7 +13,7 @@ ScrollTrigger.matchMedia({
         let kennzahlTl = gsap.timeline({
             defaults:{ duration: 1.8 },
             scrollTrigger: {
-                markers: true,
+                markers: false,
                 trigger: '#kennzahlen',
                 start: "center 90%",
                 end: '+=150px',
@@ -37,7 +37,7 @@ ScrollTrigger.matchMedia({
   "(max-width: 639px)": function() {
         let kennzahlTl1 = gsap.timeline({
             defaults:{ duration: 1.8 },
-            scrollTrigger: { markers: false, trigger: '.kennzahl-1', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl1.timeScale(1.0); }, onEnterBack: () => { kennzahlTl1.timeScale(4.0); },}
+            scrollTrigger: { trigger: '.kennzahl-1', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl1.timeScale(1.0); }, onEnterBack: () => { kennzahlTl1.timeScale(4.0); },}
         });
         kennzahlTl1
             .from(".kennzahl-1 .kennzahl-img", { scale: 0.8, ease: "back.out(6)" })
@@ -46,7 +46,7 @@ ScrollTrigger.matchMedia({
         
         let kennzahlTl2 = gsap.timeline({
             defaults:{ duration: 1.8 },
-            scrollTrigger: { markers: false, trigger: '.kennzahl-2', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl2.timeScale(1.0); }, onEnterBack: () => { kennzahlTl2.timeScale(4.0); },}
+            scrollTrigger: { trigger: '.kennzahl-2', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl2.timeScale(1.0); }, onEnterBack: () => { kennzahlTl2.timeScale(4.0); },}
         });
         kennzahlTl2
             .from(".kennzahl-2 .kennzahl-img", { scale: 0.8, ease: "back.out(6)" })
@@ -55,7 +55,7 @@ ScrollTrigger.matchMedia({
         
         let kennzahlTl3 = gsap.timeline({
             defaults:{ duration: 1.8 },
-            scrollTrigger: { markers: false, trigger: '.kennzahl-3', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl3.timeScale(1.0); }, onEnterBack: () => { kennzahlTl3.timeScale(4.0); },}
+            scrollTrigger: { trigger: '.kennzahl-3', start: "center 90%", end: '+=150px', toggleActions: "play none none reverse", onEnter: () => { kennzahlTl3.timeScale(1.0); }, onEnterBack: () => { kennzahlTl3.timeScale(4.0); },}
         });
         kennzahlTl3
             .from(".kennzahl-3 .kennzahl-img", { scale: 0.8, ease: "back.out(6)" })
