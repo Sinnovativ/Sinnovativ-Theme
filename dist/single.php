@@ -24,10 +24,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if (has_post_thumbnail( $post->ID ) ) { ?>
 					<div class="post-image" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)">
 					</div>
+					<?php } ?>
 
-					<div class="container mt-5">
+					<div class="container mt-md-3 mt-lg-5">
 						<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 					</div>
 					<?php understrap_post_nav(); ?>
