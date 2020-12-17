@@ -103,8 +103,8 @@ let wirkungsIconTl6 = gsap.timeline({
 ScrollTrigger.batch(".path-wrapper div:not(.tl-number)", {
   start: "top 60%",
   end: '+=100px',
-  onEnter: batch => gsap.to(batch, {opacity: 1, scale: 1, ease: "back.out(8)"}),
-  onLeaveBack: batch => gsap.to(batch, {opacity: 0.5, scale: 0.6, overwrite: true}),
+  onEnter: batch => gsap.to(batch, {opacity: 1, scale: 0.8, ease: "back.out(8)"}),
+  onLeaveBack: batch => gsap.to(batch, {opacity: 0.5, scale: 0.5, overwrite: true}),
 });
 
 $('.timeline-block').each(function(){
@@ -126,7 +126,7 @@ $('.timeline-block').each(function(){
             }
         }
     })
-    .to(tlNumber, { duration: 0.8, opacity: 1, scale: 3, ease: "back.out(2)" })
+    .to(tlNumber, { duration: 0.8, opacity: 1, scale: 2.2, ease: "back.out(2)" })
     .to(tlText, {duration: 0.8, x: 0, opacity: 1}, "-=0.4")
     .to(tlImage, {duration: 0.8, x: 0, opacity: 1}, "-=0.8");
 });
@@ -142,7 +142,7 @@ var $nameObj = $('#land-namen image');
 $landObj.on('click', function () {
     gsap.to(".poup-map", {duration: 0.3, ease: "back.out(1)", scale: 0, transformOrigin:"50% 50%"});
     let $modalOb = $(".popup-" + $(this).attr('id')).show();
-    gsap.to($modalOb, {duration: 0.5, ease: "back.out(1)", scale: 1, opacity: 1, transformOrigin:"50% 50%"});
+    gsap.to($modalOb, {duration: 0.5, ease: "back.out(1)", scale: 1, opacity: 1,transformOrigin:"50% 50%"});
 });
 
 $nameObj.on('click', function () {
