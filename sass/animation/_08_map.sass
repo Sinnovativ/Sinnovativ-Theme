@@ -1,5 +1,7 @@
 #standorte
-    margin: 100px 0 200px
+    margin: 40px 0 20px
+    +breakpoint(medium)
+        margin: 100px 0 200px
     svg
         display: block
         margin: 0
@@ -25,15 +27,12 @@
     flex-direction: column
     position: fixed
     overflow: auto
-    top: 20%
-    left: 50%
+    top: 6vh
+    left: 5vw
     background-color: #203669
-    //background-color: $primary-color 
-    margin-left: -350px
-    width: 700px
-    max-width: 95vw
-    min-height: 200px
-    max-height: calc(80vh - 50px)
+    //background-color: $primary-color
+    width: 91vw
+    height: 87vh
     transform: scale(0)
     opacity: 0
     box-shadow: -10px 10px 0 0 rgba(151,177,199,0.5)
@@ -41,6 +40,14 @@
     padding: 0px 40px 10px 20px
     color: white
     z-index: 9099
+    +breakpoint(medium)
+        top: 20%
+        left: 50%    
+        margin-left: -350px
+        width: 700px
+        max-width: 95vw
+        min-height: 200px
+        max-height: calc(80vh - 50px)        
     h2
         color: white
         margin-top: 15px
