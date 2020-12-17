@@ -6,9 +6,11 @@
     position: relative
     margin: 20px 0px 0px 0px
     +breakpoint(medium)
-        margin: 100px 0px 150px 0px
+        margin: 60px 0px 100px 0px
         flex-direction: row
         height: 400px
+    +breakpoint(large)
+        margin: 100px 0px 150px 0px
     .kennzahl
         flex-basis: 33.333%
         position: relative
@@ -21,6 +23,8 @@
         .kennzahl-img
             max-width: 200px
             +breakpoint(medium)
+                max-width: 23vw
+            +breakpoint(large)
                 max-width: 250px
             //padding: 0 40px
             //transform: scale(0.5)

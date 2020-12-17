@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-    <div class="container">
+    <div class="container-animation-small">
 
         <section id="kennzahlen" class="small-12">
             <?php if( have_rows('kennzahlen') ): ?>

@@ -27,6 +27,8 @@
 .wk-text-box
     position: absolute
     width: 58vw
+    +breakpoint(medium)
+        width: 49vw
     +breakpoint(xlarge)
         width: 600px
     h2
@@ -34,7 +36,11 @@
         padding: 0px
     p
         font-size: 4vw
+        +breakpoint(470px)
+            font-size: 3.5vw
         +breakpoint(medium)
+            font-size: 1.7vw
+        +breakpoint(large)
             font-size: 1.2rem
 
 .wk-text-box-1
@@ -59,6 +65,7 @@
         top: 36%
         left: 4%
         right: auto
+    +breakpoint(large)
         width: 590px
 .wk-text-box-4
     top: 61%
@@ -68,6 +75,7 @@
         top: 52%
         left: 16%
         right: auto
+    +breakpoint(large)
         width: 640px
 .wk-text-box-5
     top: 81.3%
