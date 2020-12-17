@@ -3,42 +3,6 @@
 // begin jQuery
 ( function( $ ) {
 
-
-////////////////////////////
-// Timeline Animation
-////////////////////////////
-ScrollTrigger.batch(".path-wrapper div:not(.tl-number)", {
-  start: "top 60%",
-  end: '+=100px',
-  onEnter: batch => gsap.to(batch, {opacity: 1, scale: 0.8, ease: "back.out(8)"}),
-  onLeaveBack: batch => gsap.to(batch, {opacity: 0.5, scale: 0.5, overwrite: true}),
-});
-
-$('.timeline-block').each(function(){
-    const tlNumber = $(this).find('.tl-number');
-    const tlText = $(this).find('.tl-text-box');
-    const tlImage = $(this).find('.tl-image-box');
-    let timelineTl = gsap.timeline({
-        scrollTrigger: { 
-            //markers: true,
-            trigger: tlNumber,
-            start: "top 60%",
-            end: "bottom 60%",
-            toggleActions: "play none none reverse",
-            onEnter: () => {
-                timelineTl.timeScale(1.0);
-            },
-            onEnterBack: () => {
-                timelineTl.timeScale(3.0);
-            }
-        }
-    })
-    .to(tlNumber, { duration: 0.8, opacity: 1, scale: 2.2, ease: "back.out(2)" })
-    .to(tlText, {duration: 0.8, x: 0, opacity: 1}, "-=0.4")
-    .to(tlImage, {duration: 0.8, x: 0, opacity: 1}, "-=0.8");
-});
-
-
 ////////////////////////////
 // Map
 ////////////////////////////

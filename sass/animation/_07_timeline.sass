@@ -10,33 +10,53 @@
     //border: 1px solid red
 
     .tl-text-box
-        width: 40%
-        order: 1
+        width: 73%
+        order: 2
         opacity: 0
-        transform: translateX(-200px)
-        padding-right: 20px
+        transform: translateX(200px)
+        font-size: 4vw
+        padding-left: 20px
+        +breakpoint(600px)
+            font-size: 3.5vw
+        +breakpoint(medium)
+            width: 40%
+            order: 1
+            padding-left: 0px
+            padding-right: 20px
+            font-size: 1.2rem
+            transform: translateX(-200px)
     .tl-image-box
         padding: 0px 20px
         order: 3
-        width: 40%
+        width: 0px
         opacity: 0
         transform: translateX(200px)
         text-align: center
+        display: none
+        +breakpoint(medium)
+            width: 40%
+            display: block
     .path-wrapper
-        order: 2
+        order: 1
         display: flex
         flex-direction: column
         justify-content: center
         //border: 1px solid red
-        width: 20%
+        width: 27%
+        +breakpoint(medium)
+            order: 2
+            width: 20%
         div
             background-color: $primary-color
             height: 30px
             width: 30px
-            margin: 0 auto 25px auto
+            margin: 0 auto 10px auto
             border-radius: 99px
             opacity: 0.3
-            transform: scale(0.5)
+            transform: scale(0.4)
+            +breakpoint(medium)
+                margin: 0 auto 25px auto
+                transform: scale(0.5)
         .tl-number
             height: 60px
             width: 60px
@@ -45,18 +65,25 @@
             align-items: center
             color: white
             font-weight: bold
+            margin: 15px auto 25px auto
             transform: scale(1)
-            margin: 25px auto 50px auto
+            +breakpoint(medium)
+                margin: 25px auto 50px auto
 
     &:nth-child(2n)
         .tl-text-box
-            order: 3
+            order: 2
             transform: translateX(200px)
-            padding-left: 20px
-            padding-right: 0px
+            +breakpoint(medium)
+                order: 3
+                padding-left: 20px
+                padding-right: 0px                
         .tl-image-box
-            order: 1
-            transform: translateX(-200px)
+            order: 2
+            transform: translateX(200px)
+            +breakpoint(medium)
+                transform: translateX(-200px)
+                order: 1
 
 
 
