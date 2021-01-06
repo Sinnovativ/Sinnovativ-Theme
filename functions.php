@@ -47,6 +47,12 @@ function my_script() {
 }
 add_action( 'wp_enqueue_scripts', 'my_script' );
 
+// Secondary navigation
+function register_my_menu() {
+register_nav_menu('secondary-menu',__( 'Secondary Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
 
 /**
  * Filter the except length to 20 words.

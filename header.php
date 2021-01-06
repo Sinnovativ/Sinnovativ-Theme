@@ -71,6 +71,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
+				<!-- The Secondary Menu goes here -->
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'secondary',
+						'container_class' => 'secondary',
+						'container_id'    => 'navbarNavDropdown',
+						'menu_class'      => 'navbar-nav ml-auto',
+						'fallback_cb'     => '',
+						'menu_id'         => 'secondary-menu',
+						'depth'           => 2,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				); ?>
+
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
