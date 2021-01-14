@@ -17,15 +17,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
+
 <div class="wrapper" id="page-wrapper">
-  <div class="container-fluid">
+  <div class="container-fluid breadcrumb-container">
     <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Velo</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
-    </ol>
+      <a href="<?php echo get_permalink( $post->post_parent ); ?>" >
+   <?php echo get_the_title( $post->post_parent ); ?>
+</a>
   </nav>
-    <?php list_child_pages(); ?>
+    <?php  echo list_child_pages(); ?>
   </div>
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">

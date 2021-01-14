@@ -25,6 +25,14 @@ h1 {
   }
 }
 
+.open .dropdown:hover .dropdown-menu {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	display: block;
+}
+
+
 h2 {
   color: $primary;
   margin-top: 1em;
@@ -55,6 +63,25 @@ b, strong {
 
 #content:foucs {
   outline: none;
+}
+
+.breadcrumb-container {
+  padding-left: 0;
+  padding-right: 0;
+  nav {
+      background-color: $primary;
+      a {
+        color: white;
+        font-weight: bold;
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+  }
+}
+
+ul.nav li a {
+  display: block;
+padding: .5rem 1rem;
 }
 
 .wp-block-image figcaption {
