@@ -42,7 +42,7 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 	function understrap_woocommerce_wrapper_start() {
 		$container = get_theme_mod( 'understrap_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
-		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
+		echo '<div class="container" id="content" tabindex="-1">';
 		echo '<div class="row">';
 		get_template_part( 'global-templates/left-sidebar-check' );
 		echo '<main class="site-main" id="main">';
