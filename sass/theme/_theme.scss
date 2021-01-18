@@ -483,7 +483,21 @@ footer#colophon {
   .woocommerce-result-count,
   .woocommerce-ordering,
   .woocommerce-breadcrumb,
-  .posted_in {
+  .posted_in,
+  .products .product .add-to-cart-container {
+    display: none;
+  }
+
+  .mark mark {
+    background-color: transparent;
+  }
+
+  li.product .onsale {
+    margin: 1em;
+    padding: 0.5em:
+  }
+
+  li.product-category a img {
     display: none;
   }
 
