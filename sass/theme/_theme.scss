@@ -81,7 +81,9 @@ b, strong {
 
 ul.nav li a {
   display: block;
-padding: .5rem 1rem;
+  padding: .8rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
 .wp-block-image figcaption {
@@ -122,6 +124,15 @@ padding: .5rem 1rem;
       .dropdown-toggle::after {
         display: none;
       }
+
+      #menu-item-dropdown-3766,
+      #menu-item-dropdown-4376,
+      #menu-item-3400 a {
+        color: $primary;
+        font-size: 0.8em;
+        padding-top: 0.8rem;
+      }
+
     }
 
     .dropdown-menu {
@@ -484,8 +495,9 @@ footer#colophon {
   .woocommerce-ordering,
   .woocommerce-breadcrumb,
   .posted_in,
-  .products .product .add-to-cart-container {
-    display: none;
+  .products .product .add-to-cart-container,
+  .product-category a img {
+    display: none !important;
   }
 
   .mark mark {
@@ -494,11 +506,7 @@ footer#colophon {
 
   li.product .onsale {
     margin: 1em;
-    padding: 0.5em:
-  }
-
-  li.product-category a img {
-    display: none;
+    padding: 0.5em;
   }
 
   div.product {
