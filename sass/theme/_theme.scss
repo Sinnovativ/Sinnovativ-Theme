@@ -124,6 +124,7 @@ ul.nav li a {
 
       #menu-item-dropdown-3766,
       #menu-item-dropdown-4376,
+      #menu-item-dropdown-4318,
       #menu-item-3400 a {
         color: $primary;
         font-size: 0.8em;
@@ -517,10 +518,10 @@ footer#colophon {
     }
     p.price,
     span.price {
-      color: $secondary-color;
+      color: $secondary;
     }
     span.onsale {
-      background-color: $secondary-color;
+      background-color: $secondary;
     }
   }
 
