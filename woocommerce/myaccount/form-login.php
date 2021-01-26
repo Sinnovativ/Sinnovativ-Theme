@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	</div>
 
-	<div class="u-column2 col-2">
+	<div class="u-column2 col-12">
 
 		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
