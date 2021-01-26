@@ -486,12 +486,15 @@ footer#colophon {
 
 .woocommerce {
   .woocommerce-result-count,
-  .woocommerce-ordering,
-  .woocommerce-breadcrumb,
   .posted_in,
-  .products .product .add-to-cart-container,
-  .product-category a img {
+  .products .product .add_to_cart_button,
+  .product-category a img,
+  .product-category .count {
     display: none !important;
+  }
+
+  .woocommerce-error li {
+    padding-left: 2em;
   }
 
   .mark mark {
@@ -511,6 +514,13 @@ footer#colophon {
           border-bottom-color: transparent;
         }
       }
+    }
+    p.price,
+    span.price {
+      color: $secondary-color;
+    }
+    span.onsale {
+      background-color: $secondary-color;
     }
   }
 
