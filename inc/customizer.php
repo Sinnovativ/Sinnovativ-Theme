@@ -95,6 +95,38 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 
+
+		$wp_customize->add_setting(
+			'sinnovativ_unternehmen',
+			array(
+				'default'           => 'velafrica',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'sinnovativ_unternehmen',
+				array(
+					'label'       => __( 'Unternehmen', 'understrap' ),
+					'description' => __( 'Wähle zu welchem unternehmen die Seite gehört (Hat einfluss auf farben und funktionen)', 'understrap' ),
+					'section'     => 'understrap_theme_layout_options',
+					'settings'    => 'sinnovativ_unternehmen',
+					'type'        => 'select',
+					'choices'     => array(
+						'velafrica'       => __( 'Velafrica', 'understrap' ),
+						'drahtesel' => __( 'Drahtesel', 'understrap' ),
+						'dreigaenger' => __( 'Dreigänger', 'understrap' ),
+						'wege' => __( 'Wege', 'understrap' ),
+					),
+					'priority'    => '10',
+				)
+			)
+		);
+
 		$wp_customize->add_setting(
 			'understrap_sidebar_position',
 			array(
