@@ -526,8 +526,30 @@ footer#colophon {
       background-color: $secondary;
     }
   }
+}
 
+// Team Members plugin styles
+.tmm {
+ .tmm_member {
+   border-top: none;
+   margin-right: 1%;
+   margin-left: 1%;
+   margin-top: 0px;
+   margin-bottom: 1em;
+   background-color: transparent;
+   box-shadow: none;
+   border-width: 0px 0px 0px 0px;
 
+    .tmm_photo {
+      width: 288px;
+      padding-bottom: 60%;
+      box-shadow: none;
+      border-radius: 60px !important;
+      margin-top: 0px;
+      border: none;
+      height: 200px;
+    }
+  }
 }
 
 // Contact form styles
