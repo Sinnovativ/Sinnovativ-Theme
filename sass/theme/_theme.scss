@@ -548,7 +548,8 @@ footer#colophon {
       border-radius: 0px !important;
       margin-top: 0px;
       border: none;
-      height: 200px;
+      height: 288px;
+      padding-bottom: 0;
     }
   }
 }
@@ -562,4 +563,9 @@ footer#colophon {
     font-weight: 700;
     margin-bottom: 1em !important;
   }
+}
+
+// Cycly Styles
+.cycly-bikes .items .image img {
+  padding: 0;
 }
