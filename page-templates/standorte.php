@@ -96,7 +96,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     <?php echo $standorte_karte['sudafrika']; ?>      
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer(get_theme_mod('sinnovativ_unternehmen')); ?>
 <script>
 // begin jQuery
 ( function( $ ) {

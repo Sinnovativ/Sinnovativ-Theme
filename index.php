@@ -82,4 +82,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #index-wrapper -->
 
-<?php get_footer(); ?>
+<?php get_footer(get_theme_mod('sinnovativ_unternehmen')); ?>

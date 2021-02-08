@@ -94,7 +94,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page-wrapper -->
 
-<?php get_footer(); ?>
+<?php get_footer(get_theme_mod('sinnovativ_unternehmen')); ?>
 <script>
 // begin jQuery
 ( function( $ ) {
