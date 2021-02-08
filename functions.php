@@ -67,7 +67,8 @@ else
 
 if ( $childpages ) {
 
-    $string = '<ul class="nav">' . $childpages . '</ul>';
+    $string = '<ul class="nav"><li class="page_item"><a href="'. get_permalink( $post->post_parent ) . '" >Übersicht</a></li>'.  $childpages . '</ul>';
+
 }
 
 return $string;
