@@ -40,8 +40,9 @@ h2 {
     margin-bottom: 2rem;
     padding-left: 1em;
 
-    .metaslider .flex-control-nav li {
-      padding-bottom: 0; 
+    &.flex-control-nav li {
+      // for metaslider
+      padding-bottom: 0;
     }
 
     li {
@@ -316,7 +317,7 @@ ul.nav li a {
 .fokus-teaser {
   background-color: rgba($primary,0.09);
 
-  .fokus-img {
+  .fokus-img img {
     max-height: 90px;
   }
 
