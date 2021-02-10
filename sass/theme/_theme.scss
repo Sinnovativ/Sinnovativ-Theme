@@ -39,6 +39,11 @@ h2 {
   ol, ul {
     margin-bottom: 2rem;
     padding-left: 1em;
+
+    .metaslider .flex-control-nav li {
+      padding-bottom: 0; 
+    }
+
     li {
       padding-bottom: 1em;
     }
