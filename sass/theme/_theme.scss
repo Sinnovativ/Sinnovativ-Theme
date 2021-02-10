@@ -311,6 +311,10 @@ ul.nav li a {
 .fokus-teaser {
   background-color: rgba($primary,0.09);
 
+  .fokus-img {
+    max-height: 90px;
+  }
+
   .fokus-description {
     font-size: 1rem;
   }

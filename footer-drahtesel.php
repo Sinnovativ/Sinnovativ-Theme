@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="row align-items-center">
 
-			<div class="col-md-4 col-sm-12  py-4">
+			<div class="col-md-3 col-sm-12 py-4 fokus-img">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/fokus-drahtesel.png" alt="fokus velafrica">
 			</div><!--col end -->
 
@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) || exit;
 			</div><!--col end -->
 
 
-			<div class="col-md-2  col-sm-12   py-md-4 pt-2 pb-4">
+			<div class="col-md-3  col-sm-12  py-md-4 pt-2 pb-4">
 				<a href="/anmeldung-fokus/" class="btn btn-outline-secondary"><?php 	_e( 'Anmelden', 'Drahtesel Startseite');?></a>
 			</div><!--col end -->
 		</div><!-- row end -->
