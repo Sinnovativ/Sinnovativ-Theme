@@ -24,7 +24,7 @@ var cfg = require('./gulpconfig.json');
 var paths = cfg.paths;
 
 /* The Adress of your website */
-const website = 'localhost/velafrica';
+const website = 'localhost/drahtesel';
 const wichBrowser = 'google chrome';
 //const wichBrowser = 'firefox';
 const autoStartBrowser = true;
@@ -35,7 +35,7 @@ const autoStartBrowser = true;
 // Compiles SCSS files in CSS
 gulp.task('sass', function() {
     var stream = gulp
-        .src(paths.sass + '/*.scss')
+        .src(paths.sass + '/theme-drahtesel.scss')
         .pipe(
             plumber({
                 errorHandler: function(err) {
@@ -57,7 +57,7 @@ gulp.task('sass', function() {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function() {
-    gulp.watch(`${paths.sass}/**/*.*`, gulp.series('styles'));
+    gulp.watch('${paths.sass}/**/*.*', gulp.series('styles'));
     gulp.watch(
         [
             `${paths.dev}/js/**/*.js`,
@@ -68,7 +68,7 @@ gulp.task('watch', function() {
         gulp.series('scripts')
     );
     //Inside the watch task.
-    gulp.watch(`${paths.imgsrc}/**`, gulp.series('imagemin-watch'));
+    //gulp.watch(`${paths.imgsrc}/**`, gulp.series('imagemin-watch'));
     browserSync.reload();
 });
 
@@ -98,7 +98,7 @@ gulp.task(
 // Minifies CSS files
 gulp.task('cssnano', function() {
     return gulp
-        .src(paths.css + '/theme.css')
+        .src([paths.css + '/theme-drahtesel.css', paths.css + '/theme-velafrica.css'])
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(
             plumber({
@@ -116,7 +116,7 @@ gulp.task('cssnano', function() {
 
 gulp.task('minifycss', function() {
     return gulp
-        .src(`${paths.css}/theme.css`)
+        .src([paths.css + '/theme-drahtesel.css', paths.css + '/theme-velafrica.css'])
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(cleanCSS({ compatibility: '*' }))
         .pipe(
@@ -135,7 +135,7 @@ gulp.task('minifycss', function() {
 gulp.task('cleancss', function() {
     return gulp
         .src(`${paths.css}/*.min.css`, { read: false }) // Much faster
-        .pipe(ignore('theme.css'))
+        .pipe(ignore(['theme-drahtesel.css', 'theme-velafrica.css']))
         .pipe(rimraf());
 });
 
@@ -155,7 +155,7 @@ gulp.task('browser-sync', function() {
       // auto open Browser
       open: autoStartBrowser,
       // Watch PHP Files
-      files: ["**/*.php", "sass/animation/*.*", "js/glunz.js"],
+      files: ["**/*.php", "css/theme-*.*", "js/glunz.js"],
     });
     //gulp.watch(paths.sass + '/*.scss', ['sass']);
 
