@@ -67,7 +67,8 @@ else
 
 if ( $childpages ) {
 
-    $string = '<ul class="nav">' . $childpages . '</ul>';
+    $string = '<ul class="nav"><li class="page_item"><a href="'. get_permalink( $post->post_parent ) . '" >Übersicht</a></li>'.  $childpages . '</ul>';
+
 }
 
 return $string;
@@ -116,3 +117,56 @@ function custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// Woocommerce set default product quantity to 1
+
+add_filter( 'wcfm_product_fields_stock', function( $stock_fields, $product_id, $product_type ) {
+
+        if( !$product_id ) {
+
+               if( isset( $stock_fields['manage_stock'] ) ) {
+
+                       $stock_fields['manage_stock']['dfvalue'] = 'enable';
+
+               }
+
+               if( isset( $stock_fields['stock_qty'] ) ) {
+
+                       $stock_fields['stock_qty']['value'] = 1;
+
+               }
+
+               if( isset( $stock_fields['sold_individually'] ) ) {
+
+                       $stock_fields['sold_individually']['dfvalue'] = 'enable';
+
+               }
+
+        }
+
+  return $stock_fields;
+
+}, 50, 3 );
+
+
+// Woocommerce hide products whitout image
+
+	function hide_products_without_image( $query ) {
+
+					 $query->set( 'meta_query', array( array(
+
+						 'key' => '_thumbnail_id',
+
+						 'value' => '0',
+
+						 'compare' => '>'
+
+				 ))
+
+			 );
+
+		}
+
+
+
+		add_action( 'woocommerce_product_query', 'hide_products_without_image' );

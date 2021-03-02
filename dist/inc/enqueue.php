@@ -17,8 +17,13 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		$the_theme     = wp_get_theme();
 		$theme_version = $the_theme->get( 'Version' );
 
-		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.min.css' );
-		wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version );
+		if(get_field('zugehorigkeit') == "velafrica"){
+			$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-velafrica.min.css' );
+			wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-velafrica.min.css', array(), $css_version );			
+		} else {
+			$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-drahtesel.min.css' );
+			wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-drahtesel.min.css', array(), $css_version );
+		}
 
 		wp_enqueue_script( 'jquery' );
 

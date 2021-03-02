@@ -23,11 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
   <div class="post-image home-image" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)">
   <div class="row cta d-flex align-items-center">
     <div class="col-12 col-md-6 pb-2 pb-md-0">
-      <?php  _e( 'Donate your bike for more perspectives in Africa.', 'Velafrica Startseite');  ?>
+      <?php  _e( 'Bunt, Mutig und Sozial - Wir schaffen möglichkeiten', 'Drahtesel Startseite');  ?>
     </div>
     <div class="col-12 col-md-6 d-flex justify-content-end homepage-header-buttons">
-      <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2"><?php _e( 'Find a Collection Location', 'Velafrica Startseite');  ?></a>
-      <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary"><?php _e( 'Donate', 'Velafrica Startseite'); ?></a>
+      <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2"><?php _e( 'Unsere Integrationsangebote', 'Drahtesel Startseite');  ?></a>
+      <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary"><?php _e( 'Spenden', 'Drahtesel Startseite'); ?></a>
     </div>
   </div>
   </div>
@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-    <div class="<?php echo esc_attr( $container ); ?> bg-light home-news py-4" id="content">
+    <div class="<?php echo esc_attr( $container ); ?> home-news py-4" id="content">
 
         <div class="container">
 
@@ -47,16 +47,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                     <main class="site-main" id="main" role="main">
 
+                        <div class="einleitung">                            
+                            <?php the_field('einleitung'); ?>
+                        </div>
+
                         <?php while ( have_posts() ) : the_post(); ?>
 
                           <?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
 
                         <?php endwhile; // end of the loop. ?>
 
                     </main><!-- #main -->
 
                 </div><!-- #primary -->
+
+
+                <div class="col-md-12 content-area" id="offers">
+                <?php
+                  $fields = get_fields();
+
+                  if( $fields ): ?>
+                      <ul>
+                          <?php foreach( $fields as $name => $value ): ?>
+                              <li><b><?php echo $name; ?></b> <?php echo $value; ?></li>
+                          <?php endforeach; ?>
+                      </ul>
+                  <?php endif; ?>
+
+                  </div><!-- #primary -->
 
             </div><!-- .row end -->
 
@@ -89,7 +107,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div class="row">
           <div class="col text-center pb-4">
-            <a href="was-wir-tun/news-events/" class="btn btn-outline-secondary"><?php _e( 'More News', 'Velafrica Startseite');  ?></a>
+            <a href="was-wir-tun/news-events/" class="btn btn-outline-secondary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
           </div>
         </div>
 
@@ -97,7 +115,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #full-width-page-wrapper end -->
 
-<?php get_footer(); ?>
+<?php get_footer(get_theme_mod('sinnovativ_unternehmen')); ?>
 
 
 
