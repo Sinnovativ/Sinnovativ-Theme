@@ -35,7 +35,7 @@ const autoStartBrowser = true;
 // Compiles SCSS files in CSS
 gulp.task('sass', function() {
     var stream = gulp
-        .src(paths.sass + '/theme-drahtesel.scss')
+        .src(paths.sass + '/*.scss')
         .pipe(
             plumber({
                 errorHandler: function(err) {
@@ -57,7 +57,7 @@ gulp.task('sass', function() {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function() {
-    gulp.watch('${paths.sass}/**/*.*', gulp.series('styles'));
+    gulp.watch(`${paths.sass}/**/*.*`, gulp.series('styles'));
     gulp.watch(
         [
             `${paths.dev}/js/**/*.js`,
@@ -68,7 +68,7 @@ gulp.task('watch', function() {
         gulp.series('scripts')
     );
     //Inside the watch task.
-    //gulp.watch(`${paths.imgsrc}/**`, gulp.series('imagemin-watch'));
+    gulp.watch(`${paths.imgsrc}/**`, gulp.series('imagemin-watch'));
     browserSync.reload();
 });
 
@@ -116,6 +116,7 @@ gulp.task('cssnano', function() {
 
 gulp.task('minifycss', function() {
     return gulp
+        //.src(`${paths.css}/theme.css`)
         .src([paths.css + '/theme-drahtesel.css', paths.css + '/theme-velafrica.css'])
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(cleanCSS({ compatibility: '*' }))

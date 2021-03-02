@@ -58,25 +58,41 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <?php endwhile; // end of the loop. ?>
 
                     </main><!-- #main -->
-
                 </div><!-- #primary -->
-
-
-                <div class="col-md-12 content-area" id="offers">
-                <?php
-                  $fields = get_fields();
-
-                  if( $fields ): ?>
-                      <ul>
-                          <?php foreach( $fields as $name => $value ): ?>
-                              <li><b><?php echo $name; ?></b> <?php echo $value; ?></li>
-                          <?php endforeach; ?>
-                      </ul>
-                  <?php endif; ?>
-
-                  </div><!-- #primary -->
-
             </div><!-- .row end -->
+        </div><!-- .container end -->
+
+
+        <div id="frontpage-offers">
+            <div class="container">
+                <h2>Produkte und Dienstleistungen</h2>
+                <div class="row">
+                    <div class="col-md-12 content-area angebots-wrapper">
+
+                        <?php if( have_rows('angebote') ): ?>
+                            <?php while( have_rows('angebote') ): the_row(); ?>
+                                <?php $img = get_sub_field('angebot_bild'); ?>
+                                <?php $link = get_sub_field('angebot_link'); ?>
+
+                                <div class="angebots-item">
+                                    <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
+                                        <img src="<?php echo $img['sizes']['large']; ?>" alt="<?php echo $img['title']; ?>">
+                                        <p><strong><?php the_sub_field('angebot_titel'); ?></strong></p>
+                                        <?php the_sub_field('angebot_beschreibung'); ?>
+                                    </a>
+                                </div>
+
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>Was uns bewegt</h2>
 
             <?php
             // Show latest posts

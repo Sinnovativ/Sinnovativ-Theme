@@ -57,7 +57,7 @@ gulp.task('sass', function() {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function() {
-    gulp.watch('${paths.sass}/**/*.*', gulp.series('styles'));
+    gulp.watch('${paths.sass}/glunz/fontpage.sass', gulp.series('styles'));
     gulp.watch(
         [
             `${paths.dev}/js/**/*.js`,
@@ -116,6 +116,7 @@ gulp.task('cssnano', function() {
 
 gulp.task('minifycss', function() {
     return gulp
+        //.src(`${paths.css}/theme.css`)
         .src([paths.css + '/theme-drahtesel.css', paths.css + '/theme-velafrica.css'])
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(cleanCSS({ compatibility: '*' }))
@@ -155,7 +156,7 @@ gulp.task('browser-sync', function() {
       // auto open Browser
       open: autoStartBrowser,
       // Watch PHP Files
-      files: ["**/*.php", "sass/animation/*.*", "sass/glunz/*.*", "js/glunz.js"],
+      files: ["**/*.php", "css/theme-*.*", "js/glunz.js"],
     });
     //gulp.watch(paths.sass + '/*.scss', ['sass']);
 

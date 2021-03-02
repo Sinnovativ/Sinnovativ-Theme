@@ -5,3 +5,57 @@
         font-size: 2.4rem
     a
         text-decoration: underline
+        text-decoration-thickness: 0.4rem
+        color: $font-color
+        text-decoration-color: $primary
+    a.orange
+        text-decoration-color: $velafrica
+
+.home
+    .entry-header
+        margin-top: 6rem
+    .entry-title
+        display: none
+    .entry-content
+        h2:first-of-type
+            margin-top: 0
+    h2
+        font-size: 2.4rem
+        text-align: center
+    
+    .posts-overview
+        margin: 3rem 0 2rem 0
+
+#frontpage-offers
+    margin: 4rem 0
+    padding: 3rem 0
+    background-color: $primary
+    a
+        color: $white
+    h2
+        color: $white
+    p
+        margin-bottom: 1rem
+    .angebots-wrapper
+        margin-top: 1rem
+        padding: 0 2rem
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        +breakpoint(medium)
+            padding: 0 5rem
+            
+    .angebots-item
+        transition: all 0.2s ease
+        flex-basis: 100%
+        padding: 1rem
+        +breakpoint(large)
+            flex-basis: 50%
+        img
+            transition: transform 0.2s ease
+            margin-bottom: 1.5rem
+        &:hover
+            img
+                transform: scale(1.02)
+
+
