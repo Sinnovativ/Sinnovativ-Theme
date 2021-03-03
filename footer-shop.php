@@ -22,11 +22,11 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="row align-items-center">
 
-			<div class="col-sm-12 py-4 fokus-img">
+			<div class="col-sm-12 py-2 shop-footer-menu">
 									<?php
 					wp_nav_menu( array(
 						'theme_location' => 'shop-menu',
-						'container_class' => 'shop-menu-class' ) );
+						'menu_class' => 'nav'));
 					?>
 			</div><!--col end -->
 		</div><!-- row end -->
