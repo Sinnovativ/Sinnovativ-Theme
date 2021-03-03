@@ -49,7 +49,12 @@ add_action( 'wp_enqueue_scripts', 'my_script' );
 
 // Secondary navigation
 function register_my_menu() {
-register_nav_menu('secondary-menu',__( 'Secondary Menu' ));
+register_nav_menus(
+    array(
+      'secondary-menu' => __( 'Secondary Menu' ),
+      'shop-menu' => __( 'Shop Menu' )
+    )
+  );
 }
 add_action( 'init', 'register_my_menu' );
 
