@@ -537,6 +537,11 @@ footer#colophon {
       background-color: $secondary;
     }
   }
+
+  #menu-shop-menu:first-child a {
+    padding-left: 0;
+}
+
 }
 
 // Team Members plugin styles
@@ -575,6 +580,8 @@ footer#colophon {
     margin-bottom: 1em !important;
   }
 }
+
+
 
 // Cycly Styles
 #cycly-bikes .items .item .image img {
