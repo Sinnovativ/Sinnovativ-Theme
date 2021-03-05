@@ -49,7 +49,12 @@ add_action( 'wp_enqueue_scripts', 'my_script' );
 
 // Secondary navigation
 function register_my_menu() {
-register_nav_menu('secondary-menu',__( 'Secondary Menu' ));
+register_nav_menus(
+    array(
+      'secondary-menu' => __( 'Secondary Menu' ),
+      'shop-menu' => __( 'Shop Menu' )
+    )
+  );
 }
 add_action( 'init', 'register_my_menu' );
 
@@ -170,3 +175,12 @@ add_filter( 'wcfm_product_fields_stock', function( $stock_fields, $product_id, $
 
 
 		add_action( 'woocommerce_product_query', 'hide_products_without_image' );
+
+
+
+function prefix_reset_metabox_positions(){
+  delete_user_meta( wp_get_current_user()->ID, 'meta-box-order_post' );
+  delete_user_meta( wp_get_current_user()->ID, 'meta-box-order_page' );
+  delete_user_meta( wp_get_current_user()->ID, 'meta-box-order_YOUR_CPT_SLUG' );
+}
+add_action( 'admin_init', 'prefix_reset_metabox_positions' );

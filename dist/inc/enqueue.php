@@ -17,7 +17,9 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		$the_theme     = wp_get_theme();
 		$theme_version = $the_theme->get( 'Version' );
 
-		if(get_field('zugehorigkeit') == "velafrica"){
+		$unternehmen = get_theme_mod('sinnovativ_unternehmen');
+
+		if($unternehmen == "velafrica"){
 			$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-velafrica.min.css' );
 			wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-velafrica.min.css', array(), $css_version );			
 		} else {
