@@ -184,3 +184,7 @@ function prefix_reset_metabox_positions(){
   delete_user_meta( wp_get_current_user()->ID, 'meta-box-order_YOUR_CPT_SLUG' );
 }
 add_action( 'admin_init', 'prefix_reset_metabox_positions' );
+
+
+// Frontpage Image Size
+add_image_size( 'frontpage-preview', 458, 305, array( 'center', 'center' ) );

@@ -75,11 +75,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                                 <?php $link = get_sub_field('angebot_link'); ?>
 
                                 <div class="angebots-item">
-                                    <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
-                                        <img src="<?php echo $img['sizes']['large']; ?>" alt="<?php echo $img['title']; ?>">
+                                    <?php if($link): ?>
+                                        <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
+                                    <?php endif; ?>
+
+                                        <img src="<?php echo $img['sizes']['frontpage-preview']; ?>" alt="<?php echo $img['title']; ?>">
                                         <p><strong><?php the_sub_field('angebot_titel'); ?></strong></p>
                                         <?php the_sub_field('angebot_beschreibung'); ?>
-                                    </a>
+
+                                    <?php if($link): ?>
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
 
                             <?php endwhile; ?>
@@ -119,13 +125,47 @@ $container = get_theme_mod( 'understrap_container_type' );
                 ?>
             </div>
 
+            <div class="col-md-12">
+                <div class="mehr-news center">
+                  <a href="was-wir-tun/news-events/" class="btn btn-outline-primary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
+                </div>                
+            </div>
+
         </div><!-- .container end -->
 
-        <div class="row">
-          <div class="col text-center pb-4">
-            <a href="was-wir-tun/news-events/" class="btn btn-outline-secondary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
-          </div>
+        <div id="frontpage-shop">
+            <div class="container">
+                <h2>Shop</h2>
+
+                <div class="row">
+                    <div class="col-md-12 content-area shop-wrapper">                
+
+                        <?php if( have_rows('shop_item') ): ?>
+                            <?php while( have_rows('shop_item') ): the_row(); ?>
+                                <?php $img = get_sub_field('shop_bild'); ?>
+                                <?php $link = get_sub_field('shop_link'); ?>
+        
+                                <div class="shop-item">
+                                    <?php if($link): ?>
+                                        <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
+                                    <?php endif; ?>
+
+                                        <img src="<?php echo $img['sizes']['frontpage-preview']; ?>" alt="<?php echo $img['title']; ?>">
+                                        <p><strong><?php the_sub_field('shop_titel'); ?></strong></p>
+                                        
+                                    <?php if($link): ?>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+        
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+            </div>
         </div>
+
+        
+
 
     </div><!-- #content end -->
 

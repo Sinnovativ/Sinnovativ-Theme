@@ -187,4 +187,4 @@ add_action( 'admin_init', 'prefix_reset_metabox_positions' );
 
 
 // Frontpage Image Size
-add_image_size( 'frontpage-preview', 458, 305, true );
+add_image_size( 'frontpage-preview', 458, 305, array( 'center', 'center' ) );

@@ -75,11 +75,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                                 <?php $link = get_sub_field('angebot_link'); ?>
 
                                 <div class="angebots-item">
-                                    <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
+                                    <?php if($link): ?>
+                                        <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
+                                    <?php endif; ?>
+
                                         <img src="<?php echo $img['sizes']['frontpage-preview']; ?>" alt="<?php echo $img['title']; ?>">
                                         <p><strong><?php the_sub_field('angebot_titel'); ?></strong></p>
                                         <?php the_sub_field('angebot_beschreibung'); ?>
-                                    </a>
+
+                                    <?php if($link): ?>
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
 
                             <?php endwhile; ?>
@@ -143,8 +149,10 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     <?php if($link): ?>
                                         <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
                                     <?php endif; ?>
+
                                         <img src="<?php echo $img['sizes']['frontpage-preview']; ?>" alt="<?php echo $img['title']; ?>">
                                         <p><strong><?php the_sub_field('shop_titel'); ?></strong></p>
+                                        
                                     <?php if($link): ?>
                                         </a>
                                     <?php endif; ?>
