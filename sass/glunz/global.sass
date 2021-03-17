@@ -1,0 +1,73 @@
+// Global Styles
+
+#wrapper-navbar
+    //overflow: hidden
+    margin-top: 0rem
+    padding: 0 1rem 0 1rem 
+    +breakpoint(medium)
+        margin-top: 1rem
+
+#main-menu
+    .dropdown-menu
+        top: 96%        
+
+
++breakpoint(large)
+    .navbar .navbar-nav li
+        padding-left: 0.2rem
+        a
+            font-size: 1rem
+            //padding-bottom: 0rem
+    
+        +breakpoint(xlarge)
+            padding-left: 1.5rem
+            a
+                font-size: 1.2rem
+
+
+//
+// Shitty template fixes
+//
+
+// Shitty Team Memeber plugin
+.page-template-default
+    .tmm .tmm_container:last-child .tmm_member
+        float: left !important
+    .tmm .tmm_container .tmm_member .tmm_photo
+        width: 288px
+        margin-top: 0
+        // padding-bottom: 0 !important
+        // margin-top: 0
+        //     +breakpoint(medium)
+    .tmm .tmm_member .tmm_textblock
+            max-width: 288px
+            height: 135px
+
+//
+// WooCommerce
+//
+
+.woocommerce-ordering
+    display: none
+
+.woocommerce-categories
+    padding: 0 !important
+    margin: 0 !important
+    .woocommerce-product-category-page
+        display: inline-block
+        margin: 0 1rem 1rem 0
+        padding: 0
+        // a
+        //     padding: .5rem
+        //     border: 2px solid $primary
+        //     &:hover
+        //         color: $secondary
+        //         border-color: $secondary
+        &::marker
+            content: ""
+        h2
+            margin: 0
+
+
+
+

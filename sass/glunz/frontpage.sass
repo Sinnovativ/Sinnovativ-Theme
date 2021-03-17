@@ -1,5 +1,26 @@
 // Frontpage Styles
 
+.frontpage-button
+    text-align: center
+    background-color: white
+    position: absolute
+    left: 20%
+    bottom: 10%
+    width: 12rem
+    height: 12rem
+    border-radius: 6rem
+    padding: 1.2rem 1rem
+    font-size: 1.2rem
+    line-height: 1.3rem
+    transform: rotate(-9deg)
+    //transform: scale(1)
+    h2
+        font-size: 1.6rem
+        margin: 0 1rem .5rem 1rem
+        line-height: 1.8rem
+        //font-weight: 700
+
+
 .einleitung
     p
         font-size: 2.4rem
@@ -11,7 +32,7 @@
     a.orange
         text-decoration-color: $velafrica
 
-.home
+.home-page-wrapper
     .entry-header
         margin-top: 6rem
     .entry-title
@@ -27,10 +48,6 @@
     
     .posts-overview
         margin: 3rem 0 2rem 0
-
-.homepage-header-buttons
-    display: none
-
 
 
 #frontpage-offers
@@ -67,7 +84,7 @@
                 transform: scale(1.02)
 
 #frontpage-shop
-    margin: 4rem 0
+    margin: 4rem 0 1rem 0
     padding: 3rem 0
     background-color: #F4F4F4
     .shop-wrapper
@@ -80,16 +97,20 @@
         flex-basis: 100%
         align-items: stretch
         padding: 1rem
+        overflow: hidden
         +breakpoint(large)
             flex-basis: 50%
         img
             transition: transform 0.2s ease
             margin-bottom: 1.5rem
+            width: 100%
         &:hover
             img
                 transform: scale(1.02)
         p
-            margin: 0            
+            margin: 0
+        a
+            display: block
 
 
 .mehr-news

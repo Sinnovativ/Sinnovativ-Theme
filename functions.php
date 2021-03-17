@@ -187,4 +187,33 @@ add_action( 'admin_init', 'prefix_reset_metabox_positions' );
 
 
 // Frontpage Image Size
-add_image_size( 'frontpage-preview', 458, 305, array( 'center', 'center' ) );
+add_image_size( 'frontpage-preview', 523, 357, array( 'center', 'center' ) );
+
+
+
+// Show Shop woocommerce-categories
+function woocommerce_product_category( $args = array() ) {
+    $woocommerce_category_id = get_queried_object_id();
+  $args = array(
+      'parent' => $woocommerce_category_id
+  );
+  $terms = get_terms( 'product_cat', $args );
+  if ( $terms ) {
+      echo '<ul class="woocommerce-categories">';
+      foreach ( $terms as $term ) {
+          echo '<li class="woocommerce-product-category-page">';
+            //woocommerce_subcategory_thumbnail( $term );
+          echo '<h2>';
+          echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="btn btn-outline-primary ' . $term->slug . '">';
+          echo $term->name;
+          echo '</a>';
+          echo '</h2>';
+          echo '</li>';
+      }
+      echo '</ul>';
+  }
+}
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );
+
+
+// Related Products filter
