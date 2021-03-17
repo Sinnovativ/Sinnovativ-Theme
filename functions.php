@@ -72,7 +72,13 @@ else
 
 if ( $childpages ) {
 
-    $string = '<ul class="nav"><li class="page_item"><a href="'. get_permalink( $post->post_parent ) . '" >Übersicht</a></li>'.  $childpages . '</ul>';
+    if(wp_get_post_parent_id($post->ID) == 0) {
+        $classes = "page_item current_page_item";
+    } else {
+        $classes = "page_item";
+    }
+
+    $string = '<ul class="nav"><li class="page_item ' . $classes . '"><a href="'. get_permalink( $post->post_parent ) . '" >Übersicht</a></li>'.  $childpages . '</ul>';
 
 }
 

@@ -69,7 +69,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div id="frontpage-offers">
             <div class="container">
-                <h2>Produkte und Dienstleistungen</h2>
+                <h2><?php the_field('angebots_titel'); ?></h2>
                 <div class="row">
                     <div class="col-md-12 content-area angebots-wrapper">
 
@@ -139,7 +139,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div id="frontpage-shop">
             <div class="container">
-                <h2>Shop</h2>
+                <h2><?php the_field('shop_titel'); ?></h2>
 
                 <div class="row">
                     <div class="col-md-12 content-area shop-wrapper">                

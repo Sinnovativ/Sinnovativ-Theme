@@ -1,16 +1,26 @@
 // Global Styles
 
+
+//
+// Navigation
+//
+
 #wrapper-navbar
-    //overflow: hidden
     margin-top: 0rem
     padding: 0 1rem 0 1rem 
     +breakpoint(medium)
         margin-top: 1rem
 
+.navbar-expand-lg
+    align-items: flex-end
+    .navbar-brand img
+        margin-bottom: 0rem
+        +breakpoint(xlarge)
+            margin-bottom: 1rem
+
 #main-menu
     .dropdown-menu
         top: 96%        
-
 
 +breakpoint(large)
     .navbar .navbar-nav li
@@ -24,24 +34,26 @@
             a
                 font-size: 1.2rem
 
+// Sub-Navigation
+.breadcrumb-container
+    ul.nav
+        padding-top: .5rem
+        li
+            &.current_page_item a
+                box-shadow: inset 0 0 0 2px $primary
+                font-weight: bold
+                +breakpoint(large)
+                    box-shadow: 0 0 0 0 transparent
+        a
+            margin: 0 0 .5rem 15px
+            padding: .2rem .5rem
+            border: 1px solid $primary
+            +breakpoint(large)
+                border: 1px solid transparent
+                padding: .2rem .5rem .2rem 0
 
-//
-// Shitty template fixes
-//
 
-// Shitty Team Memeber plugin
-.page-template-default
-    .tmm .tmm_container:last-child .tmm_member
-        float: left !important
-    .tmm .tmm_container .tmm_member .tmm_photo
-        width: 288px
-        margin-top: 0
-        // padding-bottom: 0 !important
-        // margin-top: 0
-        //     +breakpoint(medium)
-    .tmm .tmm_member .tmm_textblock
-            max-width: 288px
-            height: 135px
+
 
 //
 // WooCommerce
@@ -70,4 +82,20 @@
 
 
 
+//
+// Shitty template fixes
+//
 
+// Shitty Team Memeber plugin
+.page-template-default
+    .tmm .tmm_container:last-child .tmm_member
+        float: left !important
+    .tmm .tmm_container .tmm_member .tmm_photo
+        width: 288px
+        margin-top: 0
+        // padding-bottom: 0 !important
+        // margin-top: 0
+        //     +breakpoint(medium)
+    .tmm .tmm_member .tmm_textblock
+            max-width: 288px
+            height: 135px
