@@ -101,7 +101,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
 
 
-        <div class="container">
+        <div class="container news-container">
             <h2>Was uns bewegt</h2>
 
             <?php
@@ -131,7 +131,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             <div class="col-md-12">
                 <div class="mehr-news center">
-                  <a href="was-wir-tun/news-events/" class="btn btn-outline-primary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
+                  <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn btn-outline-primary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
                 </div>                
             </div>
 
