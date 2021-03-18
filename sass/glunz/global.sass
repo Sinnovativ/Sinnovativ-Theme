@@ -19,9 +19,9 @@
 .navbar-expand-lg
     align-items: flex-end
     .navbar-brand img
-        margin-bottom: 0rem
-        +breakpoint(xlarge)
-            margin-bottom: 1.2rem
+        margin: .5rem 0
+        +breakpoint(large)
+            margin: 0 0 1.2rem 0
 
 #main-menu
     .dropdown-menu
@@ -76,14 +76,19 @@
     background-color: $primary
     position: absolute
     color: white
-    right: 10%
-    bottom: -15%
+    right: -4.5rem
+    bottom: -4.5rem
     width: 20rem
     height: 20rem
     border-radius: 10rem
     padding: 3.5rem 1rem 0 1rem
     font-size: 1rem
     line-height: 1.5rem
+    transform: scale(0.6)
+    +breakpoint(large)
+        transform: scale(1)
+        right: 10%
+        bottom: -15%        
     h3
         color: white
         font-size: 1.2rem
