@@ -155,7 +155,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     <?php endif; ?>
 
                                         <img src="<?php echo $img['sizes']['frontpage-preview']; ?>" alt="<?php echo $img['title']; ?>">
-                                        <p><strong><?php the_sub_field('shop_titel'); ?></strong></p>
+                                        <p><?php the_sub_field('shop_titel'); ?></p>
                                         
                                     <?php if($link): ?>
                                         </a>

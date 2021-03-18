@@ -6,9 +6,9 @@
 //
 
 .navbar
-    padding: .5rem 0rem
-    +breakpoint(large)
-        padding: .5rem 1rem
+    padding: 0
+    // +breakpoint(large)
+    //     padding: .5rem 1rem
 
 #wrapper-navbar
     margin-top: 0rem
@@ -21,7 +21,7 @@
     .navbar-brand img
         margin-bottom: 0rem
         +breakpoint(xlarge)
-            margin-bottom: 0.8rem
+            margin-bottom: 1.2rem
 
 #main-menu
     .dropdown-menu
@@ -30,6 +30,7 @@
 +breakpoint(large)
     .navbar .navbar-nav li
         padding-left: 0.2rem
+        margin-bottom: 1.6rem
         a
             font-size: 1rem
             //padding-bottom: 0rem
@@ -58,9 +59,9 @@
                 +breakpoint(large)
                     //box-shadow: 0 0 0 0 transparent
                     background-color: transparent
-                    color: $primary
+                    color: $secondary
                     //&font-weight: bold
-                    text-decoration: underline
+                    //text-decoration: underline
         a
             @extend .subnav-button-style
 
@@ -80,8 +81,8 @@
 
 .shop-breadcrumb
     color: $secondary
-    a
-        text-decoration: underline
+    //a
+        //text-decoration: underline
 
 .woocommerce-categories
     padding: 0 !important
