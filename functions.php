@@ -209,11 +209,9 @@ function woocommerce_product_category( $args = array() ) {
       foreach ( $terms as $term ) {
           echo '<li class="woocommerce-product-category-page">';
             //woocommerce_subcategory_thumbnail( $term );
-          echo '<h2>';
-          echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="btn btn-outline-primary ' . $term->slug . '">';
+          echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="shop-category-button btn btn-outline-primary ' . $term->slug . '">';
           echo $term->name;
           echo '</a>';
-          echo '</h2>';
           echo '</li>';
       }
       echo '</ul>';
@@ -221,5 +219,18 @@ function woocommerce_product_category( $args = array() ) {
 }
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );
 
+/**
+ * Change several of the breadcrumb defaults
+ */
 
-// Related Products filter
+add_filter('woocommerce_breadcrumb_defaults', function() {
+    return array(
+            'delimiter'   => ' &#47; ',
+            'wrap_before' => '<h1 class="shop-breadcrumb">',
+            'wrap_after'  => '</h1>',
+            'before'      => '',
+            'after'       => '',
+            'home'        => '',
+    );
+    
+});

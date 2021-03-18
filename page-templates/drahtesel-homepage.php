@@ -40,7 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper home-page-wrapper" id="full-width-page-wrapper">
 
-    <div class="<?php echo esc_attr( $container ); ?> home-news py-4" id="content">
+    <div class="home-news py-4" id="content">
 
         <div class="container">
 

@@ -5,10 +5,15 @@
 // Navigation
 //
 
+.navbar
+    padding: .5rem 0rem
+    +breakpoint(large)
+        padding: .5rem 1rem
+
 #wrapper-navbar
     margin-top: 0rem
     padding: 0 1rem 0 1rem 
-    +breakpoint(medium)
+    +breakpoint(large)
         margin-top: 1rem
 
 .navbar-expand-lg
@@ -16,7 +21,7 @@
     .navbar-brand img
         margin-bottom: 0rem
         +breakpoint(xlarge)
-            margin-bottom: 1rem
+            margin-bottom: 0.8rem
 
 #main-menu
     .dropdown-menu
@@ -34,23 +39,30 @@
             a
                 font-size: 1.2rem
 
-// Sub-Navigation
+// Sub-Navigation    
+
 .breadcrumb-container
     ul.nav
-        padding-top: .5rem
+        flex-direction: column
+        padding: 0
+        margin: 1rem 0 1.2rem 0
+        +breakpoint(large)
+            flex-direction: row
+            margin-bottom: 0
         li
             &.current_page_item a
-                box-shadow: inset 0 0 0 2px $primary
-                font-weight: bold
+                //box-shadow: 0 0 0 2px $primary
+                background-color: $primary
+                color: $white
+                //font-weight: bold
                 +breakpoint(large)
-                    box-shadow: 0 0 0 0 transparent
+                    //box-shadow: 0 0 0 0 transparent
+                    background-color: transparent
+                    color: $primary
+                    //&font-weight: bold
+                    text-decoration: underline
         a
-            margin: 0 0 .5rem 15px
-            padding: .2rem .5rem
-            border: 1px solid $primary
-            +breakpoint(large)
-                border: 1px solid transparent
-                padding: .2rem .5rem .2rem 0
+            @extend .subnav-button-style
 
 
 
@@ -59,15 +71,24 @@
 // WooCommerce
 //
 
+// Archive
+.woocommerce-products-header__title
+    display: none
+
 .woocommerce-ordering
     display: none
 
+.shop-breadcrumb
+    color: $secondary
+    a
+        text-decoration: underline
+
 .woocommerce-categories
     padding: 0 !important
-    margin: 0 !important
+    margin: 0 0 2rem 0 !important
     .woocommerce-product-category-page
-        display: inline-block
-        margin: 0 1rem 1rem 0
+        display: block
+        margin: 0 0 0.5rem 0
         padding: 0
         // a
         //     padding: .5rem
@@ -77,9 +98,28 @@
         //         border-color: $secondary
         &::marker
             content: ""
-        h2
-            margin: 0
+        a
+            display: block
+            text-align: left
+        +breakpoint(large)
+            display: inline-block
+            margin: 0 1rem 0.5rem 0
+            a
+                display: inline-block
+                text-align: center
+    .shop-category-button
+        //@extend .subnav-button-style
 
+// Single
+.wc-tabs
+    display: none
+
+.woocommerce button.button.alt
+    background-color: $primary !important
+
+.woocommerce-product-category-page
+    .uncategorized
+        display: none
 
 
 //

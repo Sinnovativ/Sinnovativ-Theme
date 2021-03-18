@@ -14,7 +14,17 @@
         @media screen and (max-width: map-get($breakpoints, $breakpoint))
             @content
 
-
+.subnav-button-style
+    font-size: 17px
+    text-transform: uppercase
+    margin: 0 15px .5rem 15px
+    padding: 6px .7rem
+    border-radius: 5em
+    border: 2px solid $primary
+    +breakpoint(large)
+        border: 2px solid transparent
+        padding: .2rem .5rem .5rem 0
+        margin-right: 0
 
 /////////////////////////
 //  Retina Background Image
