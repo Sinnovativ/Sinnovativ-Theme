@@ -588,13 +588,17 @@ footer#colophon {
   .items {
     grid-template-columns: 1fr 1fr;
 
+    .filters {
+      display: none;
+    }
+    
     .item {
       .price {
         color: $secondary;
         font-weight: 400;
       }
 
-      .item-image {
+      .item-image::before {
         background-color: transparent;
       }
 
