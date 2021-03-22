@@ -585,13 +585,14 @@ footer#colophon {
 
 // Cycly Styles
 .cycly-vehicles {
+
+  .filters {
+    display: none;
+  }
+
   .items {
     grid-template-columns: 1fr 1fr;
 
-    .filters {
-      display: none;
-    }
-    
     .item {
       .price {
         color: $secondary;
