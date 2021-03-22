@@ -584,6 +584,24 @@ footer#colophon {
 
 
 // Cycly Styles
-#cycly-bikes .items .item .image img {
-  padding: 0;
+.cycly-vehicles {
+  .items {
+    grid-template-columns: 1fr 1fr;
+
+    .item {
+      .price {
+        color: $secondary;
+        font-weight: 400;
+      }
+
+      .item-image {
+        background-color: transparent;
+      }
+
+    }
+  }
+
+  .items .item .image img {
+    padding: 0;
+  }
 }
