@@ -540,6 +540,14 @@ footer#colophon {
   div.product,
   ul.product {
     .woocommerce-tabs {
+
+      #tab-additional_information {
+        display: block !important;
+        h2 {
+          display: none;
+        }
+      }
+
       ul.tabs {
         li.active {
           background-color: transparent;
