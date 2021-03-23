@@ -1,7 +1,7 @@
 /* Main Body */
 @page {
 	margin-top: 1cm;
-	margin-bottom: 10cm;
+	margin-bottom: 12cm;
 	margin-left: 2cm;
 	margin-right: 2cm;
 }
@@ -263,10 +263,10 @@ table.totals tr.payment_method {
 /* Footer Imprint */
 #footer {
 	position: absolute;
-	bottom: -9cm;
+	bottom: -11cm;
 	left: 0;
 	right: 0;
-	height: 9cm; /* if you change the footer height, don't forget to change the bottom (=negative height) and the @page margin-bottom as well! */
+	height: 11cm; /* if you change the footer height, don't forget to change the bottom (=negative height) and the @page margin-bottom as well! */
 	text-align: left;
 	border-top: 0.1mm solid gray;
 	margin-bottom: 0;
