@@ -225,12 +225,27 @@ add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 
 
 add_filter('woocommerce_breadcrumb_defaults', function() {
     return array(
-            'delimiter'   => ' &#47; ',
+            'y'   => ' &#47; ',
             'wrap_before' => '<h1 class="shop-breadcrumb">',
             'wrap_after'  => '</h1>',
             'before'      => '',
             'after'       => '',
             'home'        => '',
     );
-    
 });
+
+/**
+ * Show size of product in overview
+ */
+
+add_action('woocommerce_after_shop_loop_item_title', 'cstm_display_product_category', 5);
+
+function cstm_display_product_category()
+{
+  global $product;
+  $size = $product->get_attribute('pa_size');
+
+ if(isset($size)){
+    echo '<div class="items"><p>Size: ' . $size . '</p></div>';
+ }
+}
