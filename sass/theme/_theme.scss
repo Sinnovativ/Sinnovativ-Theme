@@ -519,6 +519,24 @@ footer#colophon {
     padding: 0.5em;
   }
 
+  ul.products {
+    li.product {
+      h2 {
+        color: $secondary;
+      }
+
+      span.price {
+        color: $primary;
+      }
+
+      .product_size {
+        font-size: 0.8em;
+        color: $secondary;
+        padding-bottom: 0.5em;
+      }
+    }
+  }
+
   div.product,
   ul.product {
     .woocommerce-tabs {
