@@ -617,6 +617,26 @@ footer#colophon {
     display: none;
   }
 
+  .dialog {
+      .vehicle-details {
+
+        h2, h3 {
+          color: $secondary;
+        }
+
+        .vehicle-price dl:nth-child(1n + 2) {
+          display: none;
+        }
+
+        .vehicle-infos .price {
+          color: $secondary;
+        }
+
+      }
+  }
+
+
+
   .items {
     grid-template-columns: 1fr 1fr;
 
