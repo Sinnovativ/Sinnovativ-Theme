@@ -501,9 +501,13 @@ footer#colophon {
   .woocommerce-result-count,
   .posted_in,
   .products .product .add_to_cart_button,
-  .product-category a img,
   .product-category .count {
     display: none !important;
+  }
+
+  // Hide categories bubbles on front page
+  .post-type-archive-product ul.woocommerce-categories {
+    display: none;
   }
 
   .woocommerce-error li {
