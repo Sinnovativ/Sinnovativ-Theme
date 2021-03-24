@@ -506,7 +506,7 @@ footer#colophon {
   }
 
   // Hide categories bubbles on front page
-  .post-type-archive-product ul.woocommerce-categories {
+  &.post-type-archive-product ul.woocommerce-categories {
     display: none;
   }
 
