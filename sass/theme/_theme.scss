@@ -624,8 +624,14 @@ footer#colophon {
           color: $secondary;
         }
 
-        .vehicle-price dl:nth-child(1n + 2) {
-          display: none;
+        .vehicle-price dl {
+          dt,dd {
+            display: none;
+          }
+          dd.price,
+          dt:first-of-type {
+            display: block;
+          }
         }
 
         .vehicle-infos .price {
