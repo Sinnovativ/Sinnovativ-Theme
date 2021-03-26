@@ -21,22 +21,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="container-fluid">
 
   <div class="post-image home-image" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)">
-  <div class="row cta d-flex align-items-center">
-    <div class="col-12 col-md-6 pb-2 pb-md-0">
-      <?php  _e( 'Bunt, Mutig und Sozial - Wir schaffen möglichkeiten', 'Drahtesel Startseite');  ?>
-    </div>
-    <div class="col-12 col-md-6 d-flex justify-content-end homepage-header-buttons">
-      <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2"><?php _e( 'Unsere Integrationsangebote', 'Drahtesel Startseite');  ?></a>
-      <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary"><?php _e( 'Spenden', 'Drahtesel Startseite'); ?></a>
-    </div>
-  </div>
+
+    <div class="frontpage-button">
+      <h2><?php  _e( 'Bunt, Mutig und Sozial');  ?></h2>
+      <?php  _e( 'Wir schaffen Möglichkeiten', 'Drahtesel Startseite');  ?>
+    </div>    
+
+    <!--<div class="row cta d-flex align-items-center">
+
+        <div class="col-12 col-md-6 d-flex justify-content-end homepage-header-buttons">
+          <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2"><?php# _e( 'Unsere Integrationsangebote', 'Drahtesel Startseite');  ?></a>
+          <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary"><?php# _e( 'Spenden', 'Drahtesel Startseite'); ?></a>
+        </div>
+    </div> -->
   </div>
 
 </div>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper home-page-wrapper" id="full-width-page-wrapper">
 
-    <div class="<?php echo esc_attr( $container ); ?> home-news py-4" id="content">
+    <div class="home-news py-4" id="content">
 
         <div class="container">
 
@@ -65,7 +69,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div id="frontpage-offers">
             <div class="container">
-                <h2>Produkte und Dienstleistungen</h2>
+                <h2><?php the_field('angebots_titel'); ?></h2>
                 <div class="row">
                     <div class="col-md-12 content-area angebots-wrapper">
 
@@ -97,7 +101,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
 
 
-        <div class="container">
+        <div class="container news-container">
             <h2>Was uns bewegt</h2>
 
             <?php
@@ -127,7 +131,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             <div class="col-md-12">
                 <div class="mehr-news center">
-                  <a href="was-wir-tun/news-events/" class="btn btn-outline-primary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
+                  <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn btn-outline-primary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
                 </div>                
             </div>
 
@@ -135,7 +139,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div id="frontpage-shop">
             <div class="container">
-                <h2>Shop</h2>
+                <h2><?php the_field('shop_titel'); ?></h2>
 
                 <div class="row">
                     <div class="col-md-12 content-area shop-wrapper">                
@@ -151,7 +155,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     <?php endif; ?>
 
                                         <img src="<?php echo $img['sizes']['frontpage-preview']; ?>" alt="<?php echo $img['title']; ?>">
-                                        <p><strong><?php the_sub_field('shop_titel'); ?></strong></p>
+                                        <p><?php the_sub_field('shop_titel'); ?></p>
                                         
                                     <?php if($link): ?>
                                         </a>
@@ -160,6 +164,13 @@ $container = get_theme_mod( 'understrap_container_type' );
         
                             <?php endwhile; ?>
                         <?php endif; ?>
+
+
+                <div class="col-md-12">
+                    <div class="mehr-news center">
+                      <a href="shop/" class="btn btn-outline-primary"><?php _e( 'Zum Shop', 'Drahtesel Startseite');  ?></a>
+                    </div>                
+                </div>                         
 
             </div>
         </div>

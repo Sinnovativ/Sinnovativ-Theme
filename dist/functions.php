@@ -72,7 +72,13 @@ else
 
 if ( $childpages ) {
 
-    $string = '<ul class="nav"><li class="page_item"><a href="'. get_permalink( $post->post_parent ) . '" >Übersicht</a></li>'.  $childpages . '</ul>';
+    if(wp_get_post_parent_id($post->ID) == 0) {
+        $classes = "page_item current_page_item";
+    } else {
+        $classes = "page_item";
+    }
+
+    $string = '<ul class="nav"><li class="page_item ' . $classes . '"><a href="'. get_permalink( $post->post_parent ) . '" >Übersicht</a></li>'.  $childpages . '</ul>';
 
 }
 
@@ -187,4 +193,60 @@ add_action( 'admin_init', 'prefix_reset_metabox_positions' );
 
 
 // Frontpage Image Size
-add_image_size( 'frontpage-preview', 458, 305, array( 'center', 'center' ) );
+add_image_size( 'frontpage-preview', 523, 357, array( 'center', 'center' ) );
+
+
+
+// Show Shop woocommerce-categories
+function woocommerce_product_category( $args = array() ) {
+    $woocommerce_category_id = get_queried_object_id();
+  $args = array(
+      'parent' => $woocommerce_category_id
+  );
+  $terms = get_terms( 'product_cat', $args );
+  if ( $terms ) {
+      echo '<ul class="woocommerce-categories">';
+      foreach ( $terms as $term ) {
+          echo '<li class="woocommerce-product-category-page">';
+            //woocommerce_subcategory_thumbnail( $term );
+          echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="shop-category-button btn btn-outline-primary ' . $term->slug . '">';
+          echo $term->name;
+          echo '</a>';
+          echo '</li>';
+      }
+      echo '</ul>';
+  }
+}
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );
+
+/**
+ * Change several of the breadcrumb defaults
+ */
+
+add_filter('woocommerce_breadcrumb_defaults', function() {
+    return array(
+			      'delimiter'   => ' &#47; ',
+            'y'   => ' &#47; ',
+            'wrap_before' => '<h1 class="shop-breadcrumb">',
+            'wrap_after'  => '</h1>',
+            'before'      => '',
+            'after'       => '',
+            'home'        => '',
+    );
+});
+
+/**
+ * Show size of product in overview
+ */
+
+add_action('woocommerce_after_shop_loop_item_title', 'cstm_display_product_category', 5);
+
+function cstm_display_product_category()
+{
+  global $product;
+  $size = $product->get_attribute('pa_size');
+
+ if(!empty($size)){
+    echo '<div class="product_size">Grösse: ' . $size . '</div>';
+ }
+}

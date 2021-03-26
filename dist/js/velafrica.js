@@ -9,3 +9,46 @@ jQuery(document).ready(function ($) {
   afterText();
 
   })
+
+  window.onload = function () {
+  var angle = 0;
+  var p = document.querySelector('.home .frontpage-button h2');
+  var text = p.textContent.split('');
+  var len = text.length;
+  var phaseJump = 360 / len;
+  var spans;
+  var animationOn = false;
+
+  p.innerHTML = text.map(function (char) {
+    return '<span>' + char + '</span>';
+  }).join('');
+
+  spans = p.children;
+
+  function wheee () {
+      if (animationOn) {
+        for (var i = 0; i < len; i++) {
+          spans[i].style.color = 'hsl(' + (angle + Math.floor(i * phaseJump)) + ', 90%, 65%)';
+        }
+        angle++;
+        requestAnimationFrame(wheee);
+      }
+    }
+
+  p.onmouseover =  function () {
+
+      console.log("mouseouver")
+      animationOn = true;
+      requestAnimationFrame(wheee);
+    }
+
+    p.onmouseout = function () {
+
+          console.log("mouseout")
+        animationOn = false;
+        for (var i = 0; i < len; i++) {
+          spans[i].style.color = '#0093d6';
+        }
+    }
+
+};
