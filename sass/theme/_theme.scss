@@ -505,6 +505,14 @@ footer#colophon {
     display: none !important;
   }
 
+  .woocommerce-products-header {
+    .products {
+      .product {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .woocommerce-error li {
     padding-left: 2em;
   }

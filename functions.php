@@ -217,7 +217,7 @@ function woocommerce_product_category( $args = array() ) {
       echo '</ul>';
   }
 }
-add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );
+add_action( 'woocommerce_archive_description', 'woocommerce_product_category', 100 );
 
 /**
  * Change several of the breadcrumb defaults
