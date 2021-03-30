@@ -506,7 +506,7 @@ footer#colophon {
   }
 
   // Hide category on startpage
-  .woocommerce.post-type-archive-product {
+  &.post-type-archive-product {
     .product-category {
       display: none;
     }
