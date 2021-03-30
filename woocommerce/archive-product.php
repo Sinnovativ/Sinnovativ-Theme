@@ -45,6 +45,10 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
+
+<h2>Category Name</h2>
+[product_category category="keider" per_page="4" columns="3" orderby="date" order="desc"]
+
 <?php
 if ( woocommerce_product_loop() ) {
 
