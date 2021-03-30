@@ -252,31 +252,38 @@ function cstm_display_product_category()
 }
 
 
-//Adding the Open Graph in the Language Attributes
-function add_opengraph_doctype( $output ) {
-        return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
-    }
-add_filter('language_attributes', 'add_opengraph_doctype');
+//Adding the Open Graph tags in the header (for good social links)
 
-//Lets add Open Graph Meta Info
 
-function insert_fb_in_head() {
+function kb_load_open_graph() {
+
     global $post;
-    if ( !is_singular()) //if it is not a post or a page
-        return;
-        echo '<meta property="og:title" content="' . get_the_title() . '"/>';
-        echo '<meta property="og:type" content="article"/>';
-        echo '<meta property="og:url" content="' . get_permalink() . '"/>';
-        echo '<meta property="og:site_name" content="'.get_bloginfo('name').'"/>';
-    if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
-        $default_image= get_bloginfo('url')."/wp-content/uploads/2020/12/drahtesel_logo.png"; //replace this with a default image on your server or an image in your media library
-        echo '<meta property="og:image" content="' . $default_image . '"/>';
+
+    // Standard-Grafik für Seiten ohne Beitragsbild
+    $kb_site_logo = get_bloginfo('url')."/wp-content/uploads/2020/10/favicon.png";
+
+    // Wenn Startseite
+    if ( is_front_page() ) { // Alternativ is_home
+        echo '<meta property="og:type" content="website" />';
+        echo '<meta property="og:url" content="' . get_bloginfo( 'url' ) . '" />';
+        echo '<meta property="og:title" content="' . esc_attr( get_bloginfo( 'name' ) ) . '" />';
+        echo '<meta property="og:image" content="' . $kb_site_logo . '" />';
+        echo '<meta property="og:description" content="' . esc_attr( get_bloginfo( 'description' ) ) . '" />';
     }
-    else{
-        $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
-        echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
-    }
-    echo "
-";
+
+    // Wenn Einzelansicht von Seite, Beitrag oder Custom Post Type
+    elseif ( is_singular() ) {
+        echo '<meta property="og:type" content="article" />';
+        echo '<meta property="og:url" content="' . get_permalink() . '" />';
+        echo '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '" />';
+        if ( has_post_thumbnail( $post->ID ) ) {
+            $kb_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+            echo '<meta property="og:image" content="' . esc_attr( $kb_thumbnail[0] ) . '" />';
+        } else
+            echo '<meta property="og:image" content="' . $kb_site_logo . '" />';
+            echo '<meta property="og:description" content="' . esc_attr( get_the_excerpt() ) . '" />';
+        }
 }
-add_action( 'wp_head', 'insert_fb_in_head', 5 );
+
+
+add_action( 'wp_head', 'kb_load_open_graph' );
