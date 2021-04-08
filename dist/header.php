@@ -11,6 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
+$unternehmen = get_theme_mod('sinnovativ_unternehmen');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -22,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('unternehmen-' . $unternehmen); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
