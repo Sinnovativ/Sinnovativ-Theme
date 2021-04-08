@@ -24,7 +24,7 @@ var cfg = require('./gulpconfig.json');
 var paths = cfg.paths;
 
 /* The Adress of your website */
-const website = 'localhost/velafrica';
+const website = 'localhost/drahtesel';
 const wichBrowser = 'google chrome';
 //const wichBrowser = 'firefox';
 const autoStartBrowser = true;

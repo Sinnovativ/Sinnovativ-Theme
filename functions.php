@@ -8,6 +8,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Get Unternehmen
+$unternehmen = get_theme_mod('sinnovativ_unternehmen');
+
 $understrap_includes = array(
   '/theme-settings.php',                  // Initialize theme default settings.
   '/setup.php',                           // Theme setup and custom theme supports.
@@ -38,12 +41,13 @@ foreach ( $understrap_includes as $file ) {
 // Glunz Animation
 function my_script() {
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'velafrica', trailingslashit( get_stylesheet_directory_uri() ) . 'js/velafrica.js', array( 'jquery' ));
-    wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array('jquery'), '3.5.1', false );
-    wp_enqueue_script( 'MotionPathPlugin', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js', array('gsap'), '3.5.1', false );
-    wp_enqueue_script( 'ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array('gsap'), '3.5.1', false );
-    wp_enqueue_script( 'DrawSVG', get_stylesheet_directory_uri() . '/js/DrawSVGPlugin.min.js', array('gsap'), '3.5.1', false );
-    wp_enqueue_script( 'animation', get_stylesheet_directory_uri() . '/js/glunz.js', array('DrawSVG'), '1.1.2', true );
+    if($unternehmen == "velafrica"){
+        wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array('jquery'), '3.5.1', false );
+        wp_enqueue_script( 'MotionPathPlugin', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js', array('gsap'), '3.5.1', false );
+        wp_enqueue_script( 'ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array('gsap'), '3.5.1', false );
+        wp_enqueue_script( 'DrawSVG', get_stylesheet_directory_uri() . '/js/DrawSVGPlugin.min.js', array('gsap'), '3.5.1', false );
+        //wp_enqueue_script( 'animation', get_stylesheet_directory_uri() . '/js/glunz.js', array('DrawSVG'), '1.1.2', true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'my_script' );
 
@@ -253,8 +257,6 @@ function cstm_display_product_category()
 
 
 //Adding the Open Graph tags in the header (for good social links)
-
-
 function kb_load_open_graph() {
 
     global $post;

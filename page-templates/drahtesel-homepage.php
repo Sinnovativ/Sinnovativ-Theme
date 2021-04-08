@@ -228,14 +228,14 @@ $container = get_theme_mod( 'understrap_container_type' );
     
       p.onmouseover =  function () {
     
-          console.log("mouseouver")
+          //console.log("mouseouver")
           animationOn = true;
           requestAnimationFrame(wheee);
         }
     
         p.onmouseout = function () {
     
-              console.log("mouseout")
+            //console.log("mouseout")
             animationOn = false;
             for (var i = 0; i < len; i++) {
               spans[i].style.color = '#0093d6';
