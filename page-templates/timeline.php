@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Timeline - Animation
+ * Template Name: Velafrica - Timeline (Animation)
  *
  * Template for displaying the the Timeline
  *

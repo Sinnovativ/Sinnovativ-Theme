@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Standorte - Afrikakarte
+ * Template Name: Velafrica - Standorte (Animation)
  *
  * Template for displaying the the Map
  *

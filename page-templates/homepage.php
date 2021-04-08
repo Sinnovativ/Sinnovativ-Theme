@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home Page - Animation
+ * Template Name: Velafrica Home Page
  *
  * Template for displaying the home page
  *
