@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Wimmelbild - Animation
+ * Template Name: Velafrica - Wimmelbild (Animation)
  *
  * Template for displaying the the WimmelBild
  *
