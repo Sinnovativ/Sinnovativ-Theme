@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 			<div class="col-md-3  col-sm-12  py-md-4 pt-2 pb-4">
-				<a href="/anmeldung-fokus/" class="btn btn-outline-secondary"><?php 	_e( 'Anmelden', 'Drahtesel Startseite');?></a>
+				<a href="https://sinnovativ.ch/fokus/" class="btn btn-outline-secondary"><?php 	_e( 'Anmelden', 'Drahtesel Startseite');?></a>
 			</div><!--col end -->
 		</div><!-- row end -->
 

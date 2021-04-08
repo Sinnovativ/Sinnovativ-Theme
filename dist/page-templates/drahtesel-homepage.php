@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="frontpage-button">
       <h2><?php  _e( 'Bunt, Mutig und Sozial');  ?></h2>
       <?php  _e( 'Wir schaffen Möglichkeiten', 'Drahtesel Startseite');  ?>
-    </div>    
+    </div>
 
     <!--<div class="row cta d-flex align-items-center">
 
@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                     <main class="site-main" id="main" role="main">
 
-                        <div class="einleitung">                            
+                        <div class="einleitung">
                             <?php the_field('einleitung'); ?>
                         </div>
 
@@ -102,7 +102,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
         <div class="container news-container">
-            <h2>Was uns bewegt</h2>
+            <h2>News</h2>
 
             <?php
             // Show latest posts
@@ -132,7 +132,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-12">
                 <div class="mehr-news center">
                   <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn btn-outline-primary"><?php _e( 'Mehr News', 'Drahtesel Startseite');  ?></a>
-                </div>                
+                </div>
             </div>
 
         </div><!-- .container end -->
@@ -142,13 +142,13 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <h2><?php the_field('shop_titel'); ?></h2>
 
                 <div class="row">
-                    <div class="col-md-12 content-area shop-wrapper">                
+                    <div class="col-md-12 content-area shop-wrapper">
 
                         <?php if( have_rows('shop_item') ): ?>
                             <?php while( have_rows('shop_item') ): the_row(); ?>
                                 <?php $img = get_sub_field('shop_bild'); ?>
                                 <?php $link = get_sub_field('shop_link'); ?>
-        
+
                                 <div class="shop-item">
                                     <?php if($link): ?>
                                         <a href="<?php echo $link['url']; ?>" alt="<?php echo $link['alt']; ?>" <?php echo $link['target']; ?> >
@@ -156,12 +156,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                                         <img src="<?php echo $img['sizes']['frontpage-preview']; ?>" alt="<?php echo $img['title']; ?>">
                                         <p><?php the_sub_field('shop_titel'); ?></p>
-                                        
+
                                     <?php if($link): ?>
                                         </a>
                                     <?php endif; ?>
                                 </div>
-        
+
                             <?php endwhile; ?>
                         <?php endif; ?>
 
@@ -169,13 +169,13 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="col-md-12">
                     <div class="mehr-news center">
                       <a href="shop/" class="btn btn-outline-primary"><?php _e( 'Zum Shop', 'Drahtesel Startseite');  ?></a>
-                    </div>                
-                </div>                         
+                    </div>
+                </div>
 
             </div>
         </div>
 
-        
+
 
 
     </div><!-- #content end -->

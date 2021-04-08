@@ -505,6 +505,21 @@ footer#colophon {
     display: none !important;
   }
 
+  // Hide category on startpage
+  &.post-type-archive-product {
+    .product-category {
+      display: none;
+    }
+  }
+
+  .woocommerce-products-header {
+    .products {
+      .product {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .woocommerce-error li {
     padding-left: 2em;
   }
