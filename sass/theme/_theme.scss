@@ -22,6 +22,10 @@ h1 {
   }
 }
 
+table tr {
+  line-height: 2em;
+}
+
 .open .dropdown:hover .dropdown-menu {
 	position: absolute;
 	top: 0;
@@ -512,13 +516,6 @@ footer#colophon {
     }
   }
 
-  .woocommerce-products-header {
-    .products {
-      .product {
-        margin-bottom: 0;
-      }
-    }
-  }
 
   .woocommerce-error li {
     padding-left: 2em;
@@ -540,12 +537,16 @@ footer#colophon {
       }
 
       span.price {
-        color: $primary;
+        color: $secondary;
+        font-weight: bold;
+        font-size: 0.8em;
       }
 
       .product_size {
         font-size: 0.8em;
         color: $secondary;
+        float: left;
+        margin-right: 1em;
         padding-bottom: 0.5em;
       }
     }
