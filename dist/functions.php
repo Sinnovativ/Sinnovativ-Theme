@@ -243,7 +243,7 @@ add_filter('woocommerce_breadcrumb_defaults', function() {
  * Show size of product in overview
  */
 
-add_action('woocommerce_after_shop_loop_item_title', 'cstm_display_product_category', 5);
+add_action('woocommerce_after_shop_loop_item_title', 'cstm_display_product_category', 12);
 
 function cstm_display_product_category()
 {
