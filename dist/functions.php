@@ -8,9 +8,6 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Get Unternehmen
-$unternehmen = get_theme_mod('sinnovativ_unternehmen');
-
 $understrap_includes = array(
   '/theme-settings.php',                  // Initialize theme default settings.
   '/setup.php',                           // Theme setup and custom theme supports.
@@ -40,6 +37,9 @@ foreach ( $understrap_includes as $file ) {
 
 // Glunz Animation
 function my_script() {
+    // Get Unternehmen
+    $unternehmen = get_theme_mod('sinnovativ_unternehmen');
+
     wp_enqueue_script( 'jquery' );
     if($unternehmen == "velafrica"){
         wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array('jquery'), '3.5.1', false );
