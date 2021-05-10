@@ -9,53 +9,122 @@
         image
             display: block
             position: relative
-        #land-objekt
-            path
-                cursor: pointer
-                transition: fill 0.2s
-            path.active
-                fill: $primary-color !important
-                //fill-opacity: 0.7
-        #land-namen
-            image
-                cursor: pointer
-            image.active
-                //transform: scale(1.5)
+        .clickme
+            cursor: pointer
+        .standort-name
+            opacity: 0
+        //     transition: all 0.3s ease
+        // .active
+        //     .standort-name
+        //         opacity: 1
+        //         transform: translateX(10px)
+
+        // #land-objekt
+        //     path
+        //         cursor: pointer
+        //         transition: fill 0.2s
+        //     path.active
+        //         fill: $primary-color !important
+        // #land-namen
+        //     image
+        //         cursor: pointer
+        //     image.active
 
 .poup-map
     display: flex
     flex-direction: column
     position: fixed
-    overflow: auto
-    top: 6vh
+    //overflow: auto
+    top: 3vh
     left: 5vw
-    background-color: #203669
-    //background-color: $primary-color
+    //background-color: #203669
+    background-color: #f58556
+    //background-color: rgb(255,240,233)
     width: 91vw
-    height: 87vh
+    height: 95vh
     transform: scale(0)
     opacity: 0
-    box-shadow: -10px 10px 0 0 rgba(151,177,199,0.5)
+    //box-shadow: -10px 10px 0 0 rgba(151,177,199,0.5)
     border-radius: 5px
-    padding: 0px 40px 10px 20px
+    padding: 0px 0 20px 0
     color: white
     z-index: 9099
     +breakpoint(medium)
-        top: 20%
-        left: 50%    
-        margin-left: -350px
-        width: 700px
+        top: 17vh
+        left: 50vw    
+        margin-left: -250px
+        width: 500px
+        height: auto
         max-width: 95vw
         min-height: 200px
-        max-height: calc(80vh - 50px)        
+        max-height: calc(83vh - 40px)        
     h2
         color: white
-        margin-top: 15px
+        margin: 17px 0 18px 61px
+        padding-right: 40px
+        font-size: 18px
+        font-weight: bold
+        +breakpoint(medium)
+            font-size: 22px
     a
         color: $primary-color
         text-decoration: underline
     p
         margin-bottom: 12px
+    .standort-icon
+        position: absolute
+        width: 60px
+        top: -10px
+        left: -10px
+        +breakpoint(medium)
+            width: 90px
+            top: -40px
+            left: -40px            
+    .standort-slider
+        margin-bottom: 15px
+        img
+            width: 100%
+        .slick-prev
+            z-index: 90
+            left: 10px
+        .slick-next
+            z-index: 91
+            right: 10px
+    .standort-text
+        padding: 0px 20px 0px 15px
+        p
+            line-height: 1.4em
+            font-size: 18px
+        a
+            color: white
+            // &:hover
+            //     font-weight: bold
+
+    .map-icon-block-wrapper
+        padding: 10px 15px 0px 15px
+        display: flex
+        flex-direction: column
+        font-size: 18px
+    .map-icon-block
+        display: flex
+        flex-direction: row
+        align-items: center
+        align-content: center
+        margin-bottom: 5px
+    .map-icon
+        text-align: center
+        width: 40px
+        img
+            height: 30px
+    .map-number
+        //text-align: center
+        padding-left: 20px
+        width: 80px
+        font-weight: bold
+    .scroll-wrapper
+        overflow: auto
+
+
 
 .close-popup
     position: absolute
