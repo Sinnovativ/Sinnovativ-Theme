@@ -24,6 +24,12 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
             wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-velafrica.min.css', array(), $css_version );
             wp_enqueue_style( 'slickSliderStyles', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('understrap-styles'));
             wp_enqueue_style( 'slickSliderStylesTheme', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array('slickSliderStyles'));
+        } else if($unternehmen == "dreigaenger"){
+            $css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-dreigaenger.min.css' );
+            wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-dreigaenger.min.css', array(), $css_version );
+        } else if($unternehmen == "wege") {
+            $css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-wege.min.css' );
+            wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-wege.min.css', array(), $css_version );
         } else {
             $css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-drahtesel.min.css' );
             wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-drahtesel.min.css', array(), $css_version );
