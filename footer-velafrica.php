@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 			<div class="col-md-2  col-sm-12   py-md-4 pt-2 pb-4">
-				<a href="<?php 	_e( '/was-wir-tun/anmeldung-fokus-velafrica-newsletter/', 'Velafrica Startseite');?>" class="btn btn-outline-secondary"><?php 	_e( 'Subscribe', 'Velafrica Startseite');?></a>
+				<a href="<?php 	_e( '/what-we-do/registration-fokus-velafrica-and-newsletter/', 'Velafrica Startseite');?>" class="btn btn-outline-secondary"><?php 	_e( 'Subscribe', 'Velafrica Startseite');?></a>
 			</div><!--col end -->
 		</div><!-- row end -->
 
