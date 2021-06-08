@@ -78,7 +78,7 @@ $standortCentre = get_field('centre');
 
 <div class="poup-map popup-future">
     <?php $standortArray = get_field('future'); ?>
-    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/zentrum.png" ?>">
+    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/shop.png" ?>">
     <span class="close-popup"><span></span><span></span></span>
     <h2><?php echo $standortArray['name']; ?></h2>
 
@@ -107,7 +107,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('<?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?> (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -120,7 +120,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -133,7 +133,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -146,7 +146,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -155,13 +155,15 @@ $standortCentre = get_field('centre');
 </div>
 
 <div class="poup-map popup-faso">
-    <?php $standortArray = get_field('faso'); ?>
+    <?php   $standortArray = array();
+            $standortArray = get_field('faso');
+    ?>
     <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/zentrum.png" ?>">
     <span class="close-popup"><span></span><span></span></span>
     <h2><?php echo $standortArray['name']; ?></h2>
 
     <?php 
-    $images = $standortArray['bilder'];
+    $images = $standortArray['faso_bilder'];
     if( $images ): ?>
         <div class="standort-slider">
             <?php foreach( $images as $image ): ?>
@@ -185,7 +187,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -198,7 +200,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -211,7 +213,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -224,7 +226,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -233,11 +235,11 @@ $standortCentre = get_field('centre');
 </div>
 
 <div class="poup-map popup-vijana">
-    <?php $standortArray = get_field('vijana'); ?>
+    <?php   $standortArray = array();
+            $standortArray = get_field('vijana'); ?>
     <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/zentrum.png" ?>">
     <span class="close-popup"><span></span><span></span></span>
-    <h2><?php echo $standortArray['name']; ?></h2>
-
+    <h2><?php echo $standortArray['name']; ?></h2>    
     <?php 
     $images = $standortArray['bilder'];
     if( $images ): ?>
@@ -263,7 +265,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -276,7 +278,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -289,7 +291,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -302,7 +304,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -312,7 +314,7 @@ $standortCentre = get_field('centre');
 
 <div class="poup-map popup-bittaye">
     <?php $standortArray = get_field('bittaye'); ?>
-    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/zentrum.png" ?>">
+    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/shop.png" ?>">
     <span class="close-popup"><span></span><span></span></span>
     <h2><?php echo $standortArray['name']; ?></h2>
 
@@ -341,7 +343,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -354,7 +356,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -367,7 +369,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -380,7 +382,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -390,12 +392,12 @@ $standortCentre = get_field('centre');
 
 <div class="poup-map popup-sport">
     <?php $standortArray = get_field('sport'); ?>
-    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/zentrum.png" ?>">
+    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/shop.png" ?>">
     <span class="close-popup"><span></span><span></span></span>
     <h2><?php echo $standortArray['name']; ?></h2>
 
     <?php 
-    $images = $standortArray['bilder'];
+    $images = $standortArray['sport_bilder'];
     if( $images ): ?>
         <div class="standort-slider">
             <?php foreach( $images as $image ): ?>
@@ -419,7 +421,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -432,7 +434,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -445,7 +447,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -458,7 +460,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -497,7 +499,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -510,7 +512,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -523,7 +525,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -536,7 +538,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -546,7 +548,7 @@ $standortCentre = get_field('centre');
 
 <div class="poup-map popup-jokes">
     <?php $standortArray = get_field('jokes'); ?>
-    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/zentrum.png" ?>">
+    <img class="standort-icon" src="<?php echo get_stylesheet_directory_uri() . "/img/map/shop.png" ?>">
     <span class="close-popup"><span></span><span></span></span>
     <h2><?php echo $standortArray['name']; ?></h2>
 
@@ -575,7 +577,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -588,7 +590,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -601,7 +603,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -614,7 +616,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -653,7 +655,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -666,7 +668,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -679,7 +681,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -692,7 +694,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -731,7 +733,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        gelieferte Velos
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -744,7 +746,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['angestellte']; ?>
                     </div>
                     <div class="map-name">
-                        Angestellte
+                        <?php _e('Angestellte', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -757,7 +759,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['ausbildungsplatze']; ?>
                     </div>
                     <div class="map-name">
-                        Ausbildungsplätze
+                        <?php _e('Ausbildungsplätze', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -770,7 +772,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['zweigstellen']; ?>
                     </div>
                     <div class="map-name">
-                        Zweigstellen
+                        <?php _e('Zweigstellen', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>                                           
@@ -789,6 +791,7 @@ $standortCentre = get_field('centre');
 ////////////////////////////
 
 var $standortObj = $('.clickme');
+var currTrans = nameObjb = posxCurrent = posxMod = "";
 
 $standortObj.on('click', function () {
     gsap.to(".poup-map", {duration: 0.3, ease: "back.out(1)", scale: 0, transformOrigin:"50% 50%"});
@@ -804,8 +807,11 @@ $(".close-popup, .close-popup::after").on('click', function () {
 $standortObj.each(function() {
     // Get X Position of Name
     var nameObj = $(this).parent().find(".standort-name");
-    var currTrans = nameObj.css('-webkit-transform').split(/[()]/)[1];
-    var posxCurrent = parseInt(currTrans.split(',')[4], 10);
+    var currTrans1 = nameObj.attr('transform').split(/[()]/)[1];
+    //var currTrans2 = nameObj.css('transform').split(/[()]/)[1];
+    var posxCurrent = parseInt(currTrans1.split(' ')[0], 10);
+    //var posxCurrent2 = parseInt(currTrans2.split(',')[4], 10);
+
     var posxMod = posxCurrent + 40;
 
     $(this).hover(function () {

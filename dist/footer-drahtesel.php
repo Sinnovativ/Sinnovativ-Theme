@@ -53,7 +53,7 @@ defined( 'ABSPATH' ) || exit;
 					031 979 70 70<br>
 					<div class="tel-hint"><?php 	_e( 'Unser Telefon wird durch unsere Teilnehmenden und Lernenden betreut.', 'Drahtesel Startseite');?></div>
 					<br>
-					<a href="mailto:info@vdrahtesel.ch">info@drahtesel.ch</a>
+					<a href="mailto:info@drahtesel.ch">info@drahtesel.ch</a>
 					</div><!--col end -->
 
 				<div class="col-md-4  col-sm-12  py-4 d-flex justify-content-center align-items-center">
@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 				</div><!--col end -->
 
 				<div class="col-md-4  col-sm-12  py-5 text-center text-md-right social-links">
-					<a target="_blank" href="https://www.facebook.com/drahtesel"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="https://www.facebook.com/drahtesel.ch"><i class="fa fa-facebook"></i></a>
 					<a target="_blank" href="https://www.instagram.com/drahtesel_velowerkstatt/"><i class="fa fa-instagram"></i></a>
 					<a target="_blank" href="https://www.linkedin.com/company/drahtesel-arbeit-mit-perspektiven/"><i class="fa fa-linkedin"></i></a>
 
