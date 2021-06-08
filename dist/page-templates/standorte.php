@@ -107,7 +107,7 @@ $standortCentre = get_field('centre');
                         <?php echo $standortArray['gelieferte_velos']; ?>
                     </div>
                     <div class="map-name">
-                        <?php _e('<?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?> (im letzten Jahr)', 'animationen-frontend'); ?>
+                        <?php _e('gelieferte Velos (im letzten Jahr)', 'animationen-frontend'); ?>
                     </div>
                 </div>
             <?php endif; ?>
