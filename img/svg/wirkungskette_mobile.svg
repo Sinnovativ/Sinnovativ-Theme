@@ -142,10 +142,10 @@
 </g>
 <g id="Icons">
 <image class="wirkungskette-icon wirkungskette-icon-1" width="400" height="400" transform="scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/1_Sammlung@2x.png"/>
-<image class="wirkungskette-icon wirkungskette-icon-2" width="400" height="400" transform="translate(0 847.2) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/2_Integration@2x.png"/>
-<image class="wirkungskette-icon wirkungskette-icon-3" width="400" height="400" transform="translate(0 1744.4) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/3_Export@2x.png"/>
-<image class="wirkungskette-icon wirkungskette-icon-4" width="400" height="400" transform="translate(0 2481.6) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/4_Soziales%20Unternehmertum@2x.png"/>
-<image class="wirkungskette-icon wirkungskette-icon-5" width="400" height="400" transform="translate(0 3298.8) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/5_Berufsbildung@2x.png"/>
-<image class="wirkungskette-icon wirkungskette-icon-6" width="400" height="400" transform="translate(0 3939.33) scale(0.5)" xlink:href="wp-content/themes/Velafrica-Theme/dist/img/content/6_Mobilitaet@2x.png"/>
+<image class="wirkungskette-icon wirkungskette-icon-2" width="400" height="400" transform="translate(0 847.2) scale(0.5)" xlink:href="https://velafrica.ch/wp-content/themes/Velafrica-Theme/dist/img/content/2_Integration@2x.png"/>
+<image class="wirkungskette-icon wirkungskette-icon-3" width="400" height="400" transform="translate(0 1744.4) scale(0.5)" xlink:href="https://velafrica.ch/wp-content/themes/Velafrica-Theme/dist/img/content/3_Export@2x.png"/>
+<image class="wirkungskette-icon wirkungskette-icon-4" width="400" height="400" transform="translate(0 2481.6) scale(0.5)" xlink:href="https://velafrica.ch/wp-content/themes/Velafrica-Theme/dist/img/content/4_Soziales%20Unternehmertum@2x.png"/>
+<image class="wirkungskette-icon wirkungskette-icon-5" width="400" height="400" transform="translate(0 3298.8) scale(0.5)" xlink:href="https://velafrica.ch/wp-content/themes/Velafrica-Theme/dist/img/content/5_Berufsbildung@2x.png"/>
+<image class="wirkungskette-icon wirkungskette-icon-6" width="400" height="400" transform="translate(0 3939.33) scale(0.5)" xlink:href="https://velafrica.ch/wp-content/themes/Velafrica-Theme/dist/img/content/6_Mobilitaet@2x.png"/>
 </g>
 </svg>
