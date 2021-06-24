@@ -293,3 +293,30 @@ function kb_load_open_graph() {
 
 
 add_action( 'wp_head', 'kb_load_open_graph' );
+
+
+// Javascript für teampage. Hover effekt für wenn 2 bilder drin sind
+function add_team_gallery_javascript() {
+  $unternehmen = get_theme_mod('sinnovativ_unternehmen');
+  if($unternehmen == "drahtesel"){
+    if (is_page('5570')) {
+      ?>
+          <script type="text/javascript">
+          jQuery(function(){
+              // When your search icon is hovered over, display the search box
+              jQuery("figure.wp-block-gallery").hover(function(){
+                // Display the search box
+                 jQuery( this ).find( "li" ).last().fadeIn("fast");
+                 jQuery( this ).find( "li" ).first().fadeOut("fast");
+              }, function(){
+                // Hide it when the container is moused out of
+                 jQuery( this ).find( "li" ).last().fadeOut("fast");
+                 jQuery( this ).find( "li" ).first().fadeIn("fast");
+              });
+            });
+          </script>
+      <?php
+    }
+  }
+}
+add_action('wp_head', 'add_team_gallery_javascript');

@@ -22,18 +22,18 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="row align-items-center">
 
-			<div class="col-md-4 col-sm-12  py-4">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/fokus-velafrica.png" alt="fokus velafrica">
+			<div class="col-md-3 col-sm-12 py-4 fokus-img">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/fokus-drahtesel.png" alt="fokus velafrica">
 			</div><!--col end -->
 
 			<div class="fokus-description col-md-6  col-sm-12  py-md-4 py-2">
-			<?php 	_e( 'The new magazine is published three to four times a year and provides exciting insights into our projects. Sign up for the print edition or our newsletter.', 'Velafrica Startseite'); ?>
+			<?php 	_e( 'Das Magazin erscheint drei Mal im Jahr und gibt spannende Einblicke in unsere Projekte. Melden Sie sich für die Druckausgabe oder unseren Newsletter an.', 'Drahtesel Startseite'); ?>
 
 			</div><!--col end -->
 
 
-			<div class="col-md-2  col-sm-12   py-md-4 pt-2 pb-4">
-				<a href="/was-wir-tun/anmeldung-fokus-velafrica-newsletter/" class="btn btn-outline-secondary"><?php 	_e( 'Subscribe', 'Velafrica Startseite');?></a>
+			<div class="col-md-3  col-sm-12  py-md-4 pt-2 pb-4">
+				<a href="https://sinnovativ.ch/fokus/" class="btn btn-outline-secondary"><?php 	_e( 'Anmelden', 'Drahtesel Startseite');?></a>
 			</div><!--col end -->
 		</div><!-- row end -->
 
@@ -47,27 +47,24 @@ defined( 'ABSPATH' ) || exit;
 			<div class="row">
 
 				<div class="footer-address col-md-4 col-sm-12 py-5">
-					Velafrica<br>
-					Waldeggstrasse 27<br>
-					3097 Liebefeld<br>
-					+41 (0)31 979 70 50<br>
-					<div class="tel-hint"><?php 	_e( 'Our phone is hosted by participants and learners from <a href="http://drahtesel.ch/" target="_blank">Drahtesel</a>.', 'Velafrica Startseite');?></div>
+					Wege Weierbühl<br>
+					Weierbühlweg 4<br>
+					3098 Köniz<br><br>
+
+					Tel. 031 971 80 00
+					Fax 031 971 80 10<br>
 					<br>
-					<a href="mailto:info@velafrica.ch">info@velafrica.ch</a>
+
+					<a href="mailto:info@wege-weierbuehl.ch">info@wege-weierbuehl.ch</a>
 					</div><!--col end -->
 
 				<div class="col-md-4  col-sm-12  py-4 d-flex justify-content-center align-items-center">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/velafrica-foot.png" alt="fokus velafrica">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/wege-foot.png" alt="wege logo">
 				</div><!--col end -->
 
 				<div class="col-md-4  col-sm-12  py-5 text-center text-md-right social-links">
-					<a target="_blank" href="https://www.facebook.com/Velafrica1"><i class="fa fa-facebook"></i></a>
-					<a target="_blank" href="https://www.instagram.com/velafrica/"><i class="fa fa-instagram"></i></a>
-					<a target="_blank" href="https://www.youtube.com/channel/UCPsGcahOckJTJrOs4HPr9uA"><i class="fa fa-youtube"></i></a>
-					<a target="_blank" href="https://ch.linkedin.com/company/velafrica"><i class="fa fa-linkedin"></i></a>
-
 					<div class="sinnovativ">
-	<span><?php 	_e( 'A company of<br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a>', 'Velafrica Startseite');?></span>
+	<span><?php 	_e( 'Ein Unternehmen der <br><a href="http://sinnovativ.ch/" target="_blank">Stiftung Sinnovativ</a>', 'Drahtesel Startseite');?></span>
 					</div><!--col end -->
 				</div><!--col end -->
 				</div><!-- row end -->
