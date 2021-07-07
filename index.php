@@ -44,8 +44,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>
-
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					// hide category 445 from loop
+					query_posts(array('cat' => '-445'));
+					while ( have_posts() ) : the_post(); ?>
 
 						<?php
 
