@@ -301,20 +301,39 @@ function add_team_gallery_javascript() {
   if($unternehmen == "drahtesel"){
     if (is_page('5570')) {
       ?>
-          <script type="text/javascript">
-          jQuery(function(){
-              // When your search icon is hovered over, display the search box
-              jQuery("figure.wp-block-gallery").hover(function(){
-                // Display the search box
-                 jQuery( this ).find( "li" ).last().fadeIn("fast");
-                 jQuery( this ).find( "li" ).first().fadeOut("fast");
-              }, function(){
-                // Hide it when the container is moused out of
-                 jQuery( this ).find( "li" ).last().fadeOut("fast");
-                 jQuery( this ).find( "li" ).first().fadeIn("fast");
-              });
-            });
-          </script>
+      <script type="text/javascript">
+
+        jQuery(document).ready(function () {
+          jQuery("figure.wp-block-gallery").on('mouseover', function () {
+          // Show second image if available
+                  console.log("in");
+                  jQuery( this ).find( "li" ).first().hide();
+                  jQuery( this ).find( "li" ).last().show();
+          });
+
+          jQuery("figure.wp-block-gallery").on('mouseout', function () {
+          // Show second image if available
+                  console.log("out");
+                  jQuery( this ).find( "li" ).last().hide();
+                  jQuery( this ).find( "li" ).first().show();
+          });
+
+          jQuery("figure.wp-block-gallery").on('touchstart', function () {
+          // Show second image if available
+                  console.log("in");
+                  jQuery( this ).find( "li" ).first().hide();
+                  jQuery( this ).find( "li" ).last().show();
+          });
+
+          jQuery("figure.wp-block-gallery").on('touchend', function () {
+          // Show second image if available
+                  console.log("in");
+                  jQuery( this ).find( "li" ).first().show();
+                  jQuery( this ).find( "li" ).last().hide();
+          });
+        });
+
+      </script>
       <?php
     }
   }
