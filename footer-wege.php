@@ -59,7 +59,7 @@ defined( 'ABSPATH' ) || exit;
 					</div><!--col end -->
 
 				<div class="col-md-4  col-sm-12  py-4 d-flex justify-content-center align-items-center">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/wege-foot.png" alt="wege logo">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/wege_foot.png" alt="wege logo">
 				</div><!--col end -->
 
 				<div class="col-md-4  col-sm-12  py-5 text-center text-md-right social-links">
