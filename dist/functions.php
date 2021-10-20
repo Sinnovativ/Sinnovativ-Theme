@@ -293,3 +293,49 @@ function kb_load_open_graph() {
 
 
 add_action( 'wp_head', 'kb_load_open_graph' );
+
+
+// Javascript für teampage. Hover effekt für wenn 2 bilder drin sind
+function add_team_gallery_javascript() {
+  $unternehmen = get_theme_mod('sinnovativ_unternehmen');
+  if($unternehmen == "drahtesel"){
+    if (is_page('5570')) {
+      ?>
+      <script type="text/javascript">
+
+        jQuery(document).ready(function () {
+          jQuery("figure.wp-block-gallery").on('mouseover', function () {
+          // Show second image if available
+                  console.log("in");
+                  jQuery( this ).find( "li" ).first().hide();
+                  jQuery( this ).find( "li" ).last().show();
+          });
+
+          jQuery("figure.wp-block-gallery").on('mouseout', function () {
+          // Show second image if available
+                  console.log("out");
+                  jQuery( this ).find( "li" ).last().hide();
+                  jQuery( this ).find( "li" ).first().show();
+          });
+
+          jQuery("figure.wp-block-gallery").on('touchstart', function () {
+          // Show second image if available
+                  console.log("in");
+                  jQuery( this ).find( "li" ).first().hide();
+                  jQuery( this ).find( "li" ).last().show();
+          });
+
+          jQuery("figure.wp-block-gallery").on('touchend', function () {
+          // Show second image if available
+                  console.log("in");
+                  jQuery( this ).find( "li" ).first().show();
+                  jQuery( this ).find( "li" ).last().hide();
+          });
+        });
+
+      </script>
+      <?php
+    }
+  }
+}
+add_action('wp_head', 'add_team_gallery_javascript');

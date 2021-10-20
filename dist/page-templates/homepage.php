@@ -109,11 +109,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
     <section class="zwischentext zitat">
-        <div class="container">
-            <h2>«<?php the_field('zitat'); ?>»</h2>
-            <p><?php the_field('zitat_name'); ?></p>
-        </div>
+        <?php if( have_rows('zitate_repeater') ): ?>
+            <div class="zitat-slider container">
+                <?php while( have_rows('zitate_repeater') ): the_row(); ?>
+                    <div>
+                        <?php $image = get_sub_field('zitat_bild'); ?>
+                        <?php if($image): ?>
+                            <img class="zitat-img" src="<?php echo $image; ?>" >
+                        <?php endif; ?>
+                        <h2>«<?php the_sub_field('zitat'); ?>»</h2>
+                        <p><?php the_sub_field('zitat_name'); ?></p>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
     </section>
+
 
 
     <div class="<?php echo esc_attr( $container ); ?> bg-light home-news py-4" id="content">
@@ -380,6 +391,18 @@ ScrollTrigger.matchMedia({
 
 
     }
+});
+
+
+$(document).ready(function(){
+  $('.zitat-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    adaptiveHeight: false,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    pauseOnHover: true
+  });
 });
 
 
