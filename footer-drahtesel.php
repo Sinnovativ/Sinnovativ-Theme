@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 			</div><!--col end -->
 
 			<div class="fokus-description col-md-6  col-sm-12  py-md-4 py-2">
-			<?php 	_e( 'Das Magazin erscheint drei Mal im Jahr und gibt spannende Einblicke in unsere Projekte. Melden Sie sich für die Druckausgabe oder unseren Newsletter an.', 'Drahtesel Startseite'); ?>
+			<?php 	_e( 'Das Magazin erscheint drei bis vier Mal im Jahr und gibt spannende Einblicke in unsere Projekte. Melden Sie sich für die Druckausgabe oder unseren Newsletter an.', 'Drahtesel Startseite'); ?>
 
 			</div><!--col end -->
 
