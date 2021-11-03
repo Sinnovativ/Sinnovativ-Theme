@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php if (has_post_thumbnail( $post->ID ) ) { ?>
 					<div class="post-image home-image" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)">
 						<div class="frontpage-button wege-button">
-						<h2>Zusammen unterwegs</h2>Ein Haus für Menschen in Not</div>
+						<h2>Laden, Restaurant, Kultur</h2>Willkommen im Dreigänger</div>
 					</div>
 					<?php } ?>
 
