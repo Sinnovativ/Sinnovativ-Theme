@@ -49,12 +49,15 @@ defined( 'ABSPATH' ) || exit;
 				<div class="footer-address col-md-4 col-sm-12 py-5">
 					Dreigänger Laden, Restaurant & Kultur<br>
 					Waldeggstrasse 27<br>
-					3097 Liebefeld<br>
+					3097 Liebefeld<br><br>
+
 					Restaurant: 031 979 70 89<br>
 					Laden: 031 979 70 61<br>
 					<div class="tel-hint"><?php 	_e( 'Unser Telefon wird durch unsere Teilnehmenden und Lernenden betreut.', 'Drahtesel Startseite');?></div>
 					<br>
 					<a href="mailto:info@dreigaenger.ch">info@dreigaenger.ch</a>
+					<br><br>
+					<div>Öffnungszeiten: MO – FR, 09 – 17 Uhr</div>
 					</div><!--col end -->
 
 				<div class="col-md-4  col-sm-12  py-4 d-flex justify-content-center align-items-center">
