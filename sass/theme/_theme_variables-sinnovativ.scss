@@ -1,0 +1,31 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+
+$velafrica: #EF6D23;
+$drahtesel: #0093D6;
+$wege: #AC902D;
+$dreigaenger: #A14E32;
+
+$primary: $dreigaenger; // Thats a sample how you could change a BootStrap variable.
+$secondary: #203669;
+$gray-900: #231f20;
+$dark: #302E2C;
+$white: #FEFEFD;
+
+$enable-responsive-font-sizes: true;
+$font-family-base: "Open Sans", sans-serif;
+$font-size-base: 1.2rem;
+$spacer: 1rem;
+$headings-color: $primary;
+$headings-margin-bottom: 1.75rem;
+$paragraph-margin-bottom: 2rem;
+$body-color: #21293c;
+$font-color: $body-color;
+
+$h1-font-size: $font-size-base * 2;
+$h2-font-size:	$font-size-base * 1.5;
+$h3-font-size:	$font-size-base * 1.25;
+$h4-font-size:	$font-size-base * 1;
+$h5-font-size:	$font-size-base * 1;

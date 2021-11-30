@@ -120,6 +120,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'velafrica'       => __( 'Velafrica', 'understrap' ),
 						'drahtesel' => __( 'Drahtesel', 'understrap' ),
 						'dreigaenger' => __( 'Dreigänger', 'understrap' ),
+						'sinnovativ' => __( 'Sinnovativ', 'understrap' ),
 						'wege' => __( 'Wege', 'understrap' ),
 					),
 					'priority'    => '10',

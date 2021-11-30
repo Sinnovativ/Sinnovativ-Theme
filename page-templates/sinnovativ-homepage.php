@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Dreigaenger Home Page
+ * Template Name: Sinnovativ Home Page
  *
  * Template for displaying the home page
  *

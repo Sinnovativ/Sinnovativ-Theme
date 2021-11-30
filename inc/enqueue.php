@@ -30,6 +30,9 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
         } else if($unternehmen == "wege") {
             $css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-wege.min.css' );
             wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-wege.min.css', array(), $css_version );
+        } else if($unternehmen == "sinnovativ") {
+            $css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-sinnovativ.min.css' );
+            wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-sinnovativ.min.css', array(), $css_version );
         } else {
             $css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-drahtesel.min.css' );
             wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme-drahtesel.min.css', array(), $css_version );
