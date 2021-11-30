@@ -51,7 +51,7 @@ defined( 'ABSPATH' ) || exit;
 					Waldeggstrasse 27<br>
 					3097 Liebefeld<br><br>
 
-					031 979 70 70
+					031 979 70 70<br>
 					<a href="mailto:info@sinnovativ.ch">info@sinnovativ.ch</a>
 					</div><!--col end -->
 
