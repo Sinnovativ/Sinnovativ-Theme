@@ -298,8 +298,7 @@ add_action( 'wp_head', 'kb_load_open_graph' );
 // Javascript für teampage. Hover effekt für wenn 2 bilder drin sind
 function add_team_gallery_javascript() {
   $unternehmen = get_theme_mod('sinnovativ_unternehmen');
-  if($unternehmen == "drahtesel"){
-    if (is_page('5570')) {
+  if(($unternehmen == "drahtesel" &&  is_page('5570')) or ($unternehmen == "sinnovativ" &&  is_page('2237'))){
       ?>
       <script type="text/javascript">
 
@@ -335,7 +334,6 @@ function add_team_gallery_javascript() {
 
       </script>
       <?php
-    }
   }
 }
 add_action('wp_head', 'add_team_gallery_javascript');
