@@ -19,7 +19,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php endif; ?>
 
 <div class="container-fluid">
-
+  <div class="esel_announcement">
+  <?php echo do_shortcode( '[hsas-shortcode group="alle" speed="30" direction="left" gap="50"]' ); ?>
+  </div>
   <div class="post-image home-image" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)">
 
     <div class="frontpage-button">
@@ -29,14 +31,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     <!--<div class="row cta d-flex align-items-center">
 
-        <div class="col-12 col-md-6 d-flex justify-content-end homepage-header-buttons">
+        <div class="col-12 col-md-6 d-flex justify-c  ontent-end homepage-header-buttons">
           <a href="/wie-sie-helfen/velospende/" class="btn btn-secondary mr-2"><?php# _e( 'Unsere Integrationsangebote', 'Drahtesel Startseite');  ?></a>
           <a href="/wie-sie-helfen/geldspende/" class="btn btn-secondary"><?php# _e( 'Spenden', 'Drahtesel Startseite'); ?></a>
         </div>
     </div> -->
   </div>
-
 </div>
+
 
 <div class="wrapper home-page-wrapper" id="full-width-page-wrapper">
 

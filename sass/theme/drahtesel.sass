@@ -16,14 +16,55 @@
     display: none
 
 .home .post-image.home-image
-    background-position: bottom
+  height: calc(100vh - 116px)
+  background-position: bottom
+  display: flex
+  align-items: flex-end
+
+.esel_announcement
+  transform: rotate(-3deg)
+  position: relative
+  z-index: 999
 
 // News lauftext style
 .js-marquee-wrapper
-    position: absolute
-    background: yellow
-    left: 0
-    transform: rotate(-3deg)
-    padding: 0.5em
-    font-weight: bold
-    top: 97px
+  position: absolute
+  background: yellow
+  left: 0
+  transform: rotate(-3deg)
+  padding: 0.5em
+  font-weight: bold
+  top: -18em
+  animation-delay: -15s !important
+
+.home .js-marquee-wrapper
+  top: 16em
+
+// Cycly in Webshop
+
+.woocommerce .cycly-vehicles
+  .moreButton
+    display: none !important
+
+  .items
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 3.8%
+
+    .item
+      text-align: left
+
+      .title
+        color: $secondary
+
+        strong
+          font-weight: 400
+          padding-right: 0
+          &::after
+            content: " – "
+
+      .price
+        color: $secondary
+        font-weight: 600
+
+      .item-image::before
+        background-color: transparent
