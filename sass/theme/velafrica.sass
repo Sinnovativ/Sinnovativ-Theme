@@ -6,17 +6,17 @@
     left: 0
 
 
-.page-id-5164,
-.page-id-6972,
-.page-id-6971
+page-id-5164 .blocks-gallery-grid
+  margin: 0 !important
+  padding: 0 !important
 
-  .blocks-gallery-grid
-    margin: 0 !important
-    padding: 0 !important
+  .blocks-gallery-item
+    margin: 0
 
-    .blocks-gallery-item
-      margin: 0 
+    @media(min-width: 768px)
+      min-width: 294px
+      min-height: 294px
 
 
-    .blocks-gallery-item:last-child
-      display: none
+  .blocks-gallery-item:last-child
+    display: none
